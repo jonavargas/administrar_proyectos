@@ -4,14 +4,19 @@
 	<title>Login</title>
 </head>
 <body>
-	<a href="login">Login</a>
-	<a href="registro">Registro</a>
-	<a href="publica">Publica</a>
-	<a href="privada">Privada</a>
+
 	<?php
+		if (!Auth::check()) {
+			echo "<a href='login'>Login</a> ";
+			echo "<a href='registro'>Registro</a> ";
+			echo "<a href='publica'>Publica</a> ";			
+		}
 		if (Auth::check()) {
-			echo "<a href='logout'>Cerrar Session</a>";
-			echo "<h3>Usuario Logueado</h3>";
+			echo "<a href='publica'>Publica</a> ";
+			echo "<a href='privada'>Privada</a> ";
+
+			echo "<a href='logout'>Cerrar Session</a> ";
+			echo "<h3>Usuario Logueado</h3> ";
 		}
 	?>
 	{{ $content }}
