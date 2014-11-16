@@ -9,7 +9,7 @@ class UserController extends \BaseController {
 	 */
 	public function index()
 	{
-        $this->layout->nest('content', 'usuario.login');
+        $this->layout->nest('content', 'inicio_sesion.login');
 	}
 
 
@@ -20,7 +20,7 @@ class UserController extends \BaseController {
 	 */
 	public function create()
 	{
-		$this->layout->nest('content', 'usuario.registro');	
+		$this->layout->nest('content', 'inicio_sesion.registro');	
 	}
 
 	public function login(){

@@ -22,4 +22,9 @@ Route::get('publica', 'HomeController@publica');
 
 Route::group(array('before' => 'auth'), function () {
 	Route::get('privada', 'HomeController@privada');
+	
 });
+
+Route::resource('proyectos', 'ProyectoController');
+Route::post('proyectos/{id}/update', 'ProyectoController@update');
+Route::get('proyectos/{id}/delete', 'ProyectoController@destroy');
