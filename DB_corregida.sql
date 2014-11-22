@@ -30,7 +30,8 @@ create table recurso_humano(
  apellido1_director_proyecto varchar (30),
  apellido2_director_proyecto varchar (30),
  proyecto_id serial,
- constraint pk_recurso_humano primary key (id)
+ constraint pk_recurso_humano primary key (id), 
+ constraint fk_recurso_humano  foreign key (proyecto_id) references proyecto (id)
 );
 
 create table interesados(
@@ -39,7 +40,8 @@ create table interesados(
  telefono_contacto varchar (20),
  descripcion_interes varchar (500),
  proyecto_id serial,
- constraint pk_interesados primary key (id)
+ constraint pk_interesados primary key (id),
+ constraint fk_interesados  foreign key (proyecto_id) references proyecto (id)
 );
 
 
@@ -48,8 +50,9 @@ create table tipo_comunicacion(
  tipo_comunicacion varchar (50),
  detalle varchar (500),
  proyecto_id serial,
- constraint pk_tipo_comunicacion primary key (id)
-);
+ constraint pk_tipo_comunicacion primary key (id),
+ constraint fk_comunicacion_proyecto foreign key (proyecto_id) references proyecto (id)
+ );
 
 create table comunicaciones(
  id serial,
@@ -58,7 +61,8 @@ create table comunicaciones(
  apellido2_persona_a_contactar varchar (30),
  metodo_comunicacion varchar (30),
  tipo_comunicacion_id serial,
- constraint pk_comunicaciones primary key (id)
+ constraint pk_comunicaciones primary key (id),
+ constraint fk_comunicaciones_tipo_comunicacion foreign key (tipo_comunicacion_id) references tipo_comunicacion (id)
 );
 
 create table riesgo_proyecto(
@@ -67,7 +71,8 @@ create table riesgo_proyecto(
  descripcion_riesgo varchar (500),
  solucion varchar (500),
  proyecto_id serial,
- constraint pk_riesgo_proyecto primary key (id)
+ constraint pk_riesgo_proyecto primary key (id),
+ constraint fk_riesgos_proyecto_proyecto  foreign key (proyecto_id) references proyecto (id)
 );
 
 create table alcance_proyecto(
@@ -78,7 +83,8 @@ create table alcance_proyecto(
  calidad varchar (10),
  fecha_estimada varchar(20),
  proyecto_id serial,
- constraint pk_alcance_proyecto primary key (id)
+ constraint pk_alcance_proyecto primary key (id),
+ constraint fk_alcance_proyecto_proyecto  foreign key (proyecto_id) references proyecto (id)
 );
 
 
@@ -87,7 +93,8 @@ create table adquisiciones(
  nombre_adquisicion varchar (30),
  costo_adquisicion double precision, 
  alcance_proyecto_id serial,
- constraint pk_adquisiciones primary key (id)
+ constraint pk_adquisiciones primary key (id),
+ constraint fk_alcance_proyecto_adquisiciones  foreign key (alcance_proyecto_id) references alcance_proyecto (id)
 );
 
 create table cronograma(
@@ -97,20 +104,22 @@ create table cronograma(
  fecha_fin varchar(20),
  duracion varchar (10),
  alcance_proyecto_id serial,
- constraint pk_cronograma primary key (id)
+ constraint pk_cronograma primary key (id),
+ constraint fk_cronograma_alcance_proyecto  foreign key (alcance_proyecto_id) references alcance_proyecto (id)
 );
 
 create table costo(
  id serial,
  costo_actividad double precision,
  alcance_proyecto_id serial,
- constraint pk_costo primary key (id)
+ constraint pk_costo primary key (id),
+ constraint fk_costo_alcance_proyecto  foreign key (alcance_proyecto_id) references alcance_proyecto (id)
 );
 
 create table login(
  id serial,
  usuario varchar (30) not null,
- contraseña varchar (30) not null,
+ password varchar (100) not null,
  remember_token character varying(100),
  constraint pk_login primary key (id)
 );
