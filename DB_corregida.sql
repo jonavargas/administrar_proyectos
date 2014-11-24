@@ -8,6 +8,7 @@ create database proyecto
 
 create table proyecto(
   id serial,
+  nombre_proyecto varchar (50),
   nombre_director_proyecto varchar (30),
   apellido1_director_proyecto varchar (30),
   apellido2_director_proyecto varchar (30),
@@ -25,10 +26,7 @@ create table recurso_humano(
  nombre_personal_requerido varchar (30),
  apellido1_personal_requerido varchar (30),
  apellido2_personal_requerido varchar (30),
- especialida varchar (30),
- nombre_director_proyecto varchar (30),
- apellido1_director_proyecto varchar (30),
- apellido2_director_proyecto varchar (30),
+ especialidad varchar (30),
  proyecto_id serial,
  constraint pk_recurso_humano primary key (id), 
  constraint fk_recurso_humano  foreign key (proyecto_id) references proyecto (id)
@@ -78,7 +76,7 @@ create table riesgo_proyecto(
 create table alcance_proyecto(
  id serial,
  responsable varchar(30),
- nombre_activida varchar(50),
+ nombre_actividad varchar(50),
  descripcion varchar (500),
  calidad varchar (10),
  fecha_estimada varchar(20),

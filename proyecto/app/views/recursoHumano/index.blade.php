@@ -2,18 +2,17 @@
 
     if (Auth::check()) {
         
-        echo "<a href='proyectos/create'>Crear Nuevo Proyecto</a> ";
+        echo "<a href='recursoHumano/create'>Crear Nuevo Recurso Humano</a> ";
 
     }
 ?> 
 
 <table>
     <tr >
-        <th ALIGN=center>Nombre de Proyecto</th>
-        <th colspan="3" ALIGN=center>Director de Proyecto</th>
-        <th ALIGN=center>Patrocinador</th>
-        <th ALIGN=center>Monto Proyecto</th>
-        <th ALIGN=center>Presupuesto</th>
+        <th colspan="3" ALIGN=center>Nombre empleado</th>
+        <th ALIGN=center>Apellido 1</th>
+        <th ALIGN=center>Apellido 2</th>
+        <th ALIGN=center>Especialidad</th>
         <th ALIGN=center>Moneda</th>
         <th ALIGN=center>Observaciones</th>
         <?php
@@ -26,7 +25,6 @@
     </tr>
     @foreach($proyectos as $proyecto)
         <tr>
-            <td ALIGN=center>{{ $proyecto->nombre_proyecto }}</td>
             <td ALIGN=center>{{ $proyecto->nombre_director_proyecto }}</td>   
             <td ALIGN=center>{{ $proyecto->apellido1_director_proyecto }}</td>    
             <td ALIGN=center>{{ $proyecto->apellido2_director_proyecto }}</td>    

@@ -66,7 +66,7 @@ return array(
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'administrar_proyectos',
+			'database' => 'proyecto',
 			'username' => 'postgres',
 			'password' => '12345',
 			'charset'  => 'utf8',

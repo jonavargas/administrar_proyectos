@@ -1,12 +1,8 @@
 <h3>Nuevo Proyecto</h3>
 
 {{ Form::open(array('url' => 'proyectos')) }}
-
-    {{ Form::label('nombre_proyecto', 'Nombre del proyecto') }}
-    {{ Form::text('nombre_proyecto', '') }}
-
+    
     {{ Form::label('titulo', 'Director de Proyecto') }}
-
 
     {{ Form::label('nombre_director_proyecto', 'Nombre') }}
     {{ Form::text('nombre_director_proyecto', '') }}
@@ -22,7 +18,7 @@
     {{ Form::label('nombre_patrocinador', 'Nombre') }}
     {{ Form::text('nombre_patrocinador', '') }}
 
-    {{ Form::label('monto_proyecto', 'Monto Proyecto') }}
+    {{ Form::label('monto_proyecto', 'Monto Proyeto') }}
     {{ Form::number('monto_proyecto', '') }}
 
     {{ Form::label('presupuesto_proyecto', 'Presupuesto') }}

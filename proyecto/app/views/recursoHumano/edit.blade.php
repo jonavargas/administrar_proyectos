@@ -2,9 +2,6 @@
 
 {{ Form::open(array('url' => "proyectos/$proyecto->id/update")) }}
 
-    {{ Form::label('nombre_proyecto', 'Nombre del Proyecto') }}
-    {{ Form::text('nombre_proyecto', $proyecto->nombre_proyecto) }}
-
     {{ Form::label('nombre_director_proyecto', 'Nombre') }}
     {{ Form::text('nombre_director_proyecto', $proyecto->nombre_director_proyecto) }}
 

@@ -27,7 +27,7 @@ class ProyectoController extends \BaseController {
      */
     public function create()
     {
-        $this->layout->titulo = 'Crear Avión';
+        $this->layout->titulo = 'Crear Proyecto';
         $this->layout->nest(
             'content',
             'proyectos.create',
@@ -43,6 +43,7 @@ class ProyectoController extends \BaseController {
      */
     public function store()
     {
+        $nom_pro = Input::get("nombre_proyecto");
         $nom_dir_pro = Input::get("nombre_director_proyecto");
         $ape2_dir_pro = Input::get("apellido1_director_proyecto");
         $ape2_dir_pro = Input::get("apellido2_director_proyecto");
@@ -53,6 +54,7 @@ class ProyectoController extends \BaseController {
         $observaciones = Input::get("observaciones");
 
         $proyecto = new Proyecto();
+        $proyecto->nombre_proyecto = $nom_pro;
         $proyecto->nombre_director_proyecto = $nom_dir_pro;
         $proyecto->apellido1_director_proyecto = $ape2_dir_pro;
         $proyecto->apellido2_director_proyecto = $ape2_dir_pro;
@@ -93,6 +95,7 @@ class ProyectoController extends \BaseController {
      */
     public function update($id)
     {
+        $nom_pro = Input::get("nombre_proyecto");
         $nom_dir_pro = Input::get('nombre_director_proyecto');
         $ape1_dir_pro = Input::get('apellido1_director_proyecto');
         $ape2_dir_pro = Input::get('apellido2_director_proyecto');
@@ -103,6 +106,7 @@ class ProyectoController extends \BaseController {
         $observaciones = Input::get('observaciones');
 
         $proyecto = Proyecto::find($id);
+        $proyecto->nombre_proyecto = $nom_pro;
         $proyecto->nombre_director_proyecto = $nom_dir_pro;
         $proyecto->apellido1_director_proyecto = $ape1_dir_pro;
         $proyecto->apellido2_director_proyecto = $ape2_dir_pro;

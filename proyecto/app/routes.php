@@ -28,3 +28,5 @@ Route::group(array('before' => 'auth'), function () {
 Route::resource('proyectos', 'ProyectoController');
 Route::post('proyectos/{id}/update', 'ProyectoController@update');
 Route::get('proyectos/{id}/delete', 'ProyectoController@destroy');
+
+Route::resource('recursoHumano', 'RecursoHumanoController');
