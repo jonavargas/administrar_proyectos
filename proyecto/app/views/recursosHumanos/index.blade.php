@@ -27,7 +27,9 @@
             <td ALIGN=center>{{ $rh->apellido1_personal_requerido }}</td>    
             <td ALIGN=center>{{ $rh->apellido2_personal_requerido }}</td>    
             <td ALIGN=center>{{ $rh->especialidad }}</td>    
-            <td ALIGN=center>{{ $rh->proyecto_id }}</td>       
+            @foreach($proyectos as $proyecto)
+                <td ALIGN=center>{{ $proyecto->nombre_proyecto }}</td>
+            @endforeach           
              
             <?php
        
@@ -40,4 +42,5 @@
             ?> 
         </tr>
     @endforeach
+        
 </table> 

@@ -8,12 +8,14 @@ class RecursoHumanoController extends \BaseController {
 	 */
 	public function index()
 	{
-		$rh = RecursoHumano::all();
+		$proyectos = Proyecto::all();
+		$rh = RecursoHumano::proyectosDisponibles();
         $this->layout->titulo = 'Listado de Recurso Humano';
         $this->layout->nest(
             'content',
             'recursosHumanos.index',
             array(
+            	'proyectos' => $proyectos,
                 'recursosHumanos' => $rh
             )
         );
@@ -27,11 +29,15 @@ class RecursoHumanoController extends \BaseController {
 	 */
 	public function create()
 	{
+		        
+		$proyectos = Proyecto::all();
 		$this->layout->titulo = 'Crear Recurso Humano';
         $this->layout->nest(
             'content',
             'recursosHumanos.create',
-            array()
+            array(
+            	'proyectos' => $proyectos                
+            )
         );
 	}
 
@@ -43,16 +49,16 @@ class RecursoHumanoController extends \BaseController {
 	 */
 	public function store()
 	{
-		$nom_dir_pro = Input::get("nombre_personal_requerido");
-        $ape2_dir_pro = Input::get("apellido1_personal_requerido");
-        $ape2_dir_pro = Input::get("apellido2_personal_requerido");
+		$nom_personal = Input::get("nombre_personal_requerido");
+        $ape1_personal = Input::get("apellido1_personal_requerido");
+        $ape2_personal = Input::get("apellido2_personal_requerido");
         $especialidad = Input::get("especialidad");
-        $proyecto_id = Input::get("proyecto_id");
+        $proyecto_id = Input::get("proyecto");/////////////////// del combo box
 
         $rh = new RecursoHumano();
-        $rh->nombre_personal_requerido = $nom_dir_pro;
-        $rh->apellido1_personal_requerido = $ape2_dir_pro;
-        $rh->apellido2_personal_requerido = $ape2_dir_pro;        
+        $rh->nombre_personal_requerido = $nom_personal;
+        $rh->apellido1_personal_requerido = $ape1_personal;
+        $rh->apellido2_personal_requerido = $ape2_personal;        
         $rh->especialidad = $especialidad;
         $rh->proyecto_id = $proyecto_id;
         $rh->save();
@@ -80,10 +86,12 @@ class RecursoHumanoController extends \BaseController {
 	public function edit($id)
 	{
 		$rh = RecursoHumano::find($id);
+		$proyectos = Proyecto::all();
         $this->layout->nest(
             'content',
             'recursosHumanos.edit',
             array(
+            	'proyectos' => $proyectos,
                 'rh' => $rh
             )
         );
@@ -98,16 +106,16 @@ class RecursoHumanoController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$nom_dir_pro = Input::get("nombre_personal_requerido");
-        $ape2_dir_pro = Input::get("apellido1_personal_requerido");
-        $ape2_dir_pro = Input::get("apellido2_personal_requerido");
+		$nom_personal = Input::get("nombre_personal_requerido");
+        $ape1_personal = Input::get("apellido1_personal_requerido");
+        $ape2_personal = Input::get("apellido2_personal_requerido");
         $especialidad = Input::get("especialidad");
-        $proyecto_id = Input::get("proyecto_id");
+        $proyecto_id = Input::get("proyecto");/////////
 
-        $proyecto = RecursoHumano::find($id);
-        $rh->nombre_personal_requerido = $nom_dir_pro;
-        $rh->apellido1_personal_requerido = $ape2_dir_pro;
-        $rh->apellido2_personal_requerido = $ape2_dir_pro;        
+        $rh = RecursoHumano::find($id);
+        $rh->nombre_personal_requerido = $nom_personal;
+        $rh->apellido1_personal_requerido = $ape1_personal;
+        $rh->apellido2_personal_requerido = $ape2_personal;        
         $rh->especialidad = $especialidad;
         $rh->proyecto_id = $proyecto_id;
         $rh->save();

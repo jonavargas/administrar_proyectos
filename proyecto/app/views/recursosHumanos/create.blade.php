@@ -15,8 +15,16 @@
     {{ Form::text('especialidad', '') }}
 
     {{ Form::label('proyecto_id', 'Proyectos') }}
-    {{ Form::select('proyecto_id', array('Colones' => 'Colones', 'Dolares' => 'Dolares')) }}    
+    
+    <select name="proyecto">
+        @foreach($proyectos as $proyecto)
+            <option value={{$proyecto->id}}>{{$proyecto->nombre_proyecto}}</option>
+        @endforeach
+    </select>
+
 
     {{Form::submit('Crear', array())}}
 
 {{ Form::close() }}
+
+        
