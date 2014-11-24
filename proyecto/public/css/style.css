@@ -1,0 +1,264 @@
+.body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #BAE1E8;
+}
+
+
+h1{
+	font-size: 2em;
+	text-align: center;
+}
+
+
+#board /* Div que contiene los div en donde se sueltan las tareas*/
+{
+	min-height:100px;
+	display: inline-block;
+	margin-top: 7%;
+}
+
+#task_title{/* Titulo tarea en el dashboard */	
+	text-align:center;
+	margin-top: 1%;
+	margin-left: -3%;
+	margin-bottom: 1.5%;	
+}
+
+.lbl_title{
+	color: #FFFFFF;
+}
+
+#task_title :hover{	/* Efecto hover para el titulo tarea en el dashboard */
+	text-decoration: none;
+	color: #3688C4;
+}
+
+#descripcion{ /* Descripción tarea en el dashboard */
+	text-align: justify;
+	margin-left: 4%;
+	margin-right: 4%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	overflow:auto;
+}
+
+#eliminar{ /* Eliminar tarea en el dashboard */
+	float: right;
+	margin-right: 3%;
+	margin-top: -8%;
+}
+
+.glyphicon-remove{
+	color: #FFFFFF;	
+}
+
+.glyphicon-remove:hover {
+	text-decoration: none;
+	color: #F41414;
+}
+
+#nueva, #en_progreso, #terminada
+{
+	/*background-color: tan;*/
+	background-color: #f7f5f5;
+	display: inline-block;	
+	min-height: 600px;
+	border: 4px solid #999;
+	border-right: 2px;
+	background-image: url("../img/div.jpg");
+
+}
+
+#verificada{
+	background-color: #f7f5f5;
+	display: inline-block;	
+	min-height: 600px;
+	border: 4px solid #999;
+	background-image: url("../img/div.jpg");
+	border: -2px;
+}
+
+*[draggable=true]
+{
+	float: left;
+	min-width: 50px;
+	min-height: 50px;
+	border: 1px solid #CCC;
+	margin: 10px;
+	margin-top: 15px;
+	font-weight: bold;
+	min-height: 60px;
+	/*background-image: -webkit-gradient(linear,
+             left top, left bottom,
+color-stop(0.63, white),
+             color-stop(0.92, rgb(5,161,245)));
+                    background-image:-moz-linear-gradient(
+                        center top,
+                        white 63%,
+                        rgb(5,161,245) 92%
+                    );
+				*/
+			/*para Firefox*/
+	-moz-border-radius: 15px 15px 15px 15px;
+	/*para Safari y Chrome*/
+	-webkit-border-radius: 15px 15px 15px 15px;
+	/* para Opera */
+	border-radius: 15px 15px 15px 15px;
+	-webkit-background-size: 1px 8px;
+	-moz-background-size: 1px 8px;
+	background-size: 1px 8px;
+	background-repeat: repeat;
+	width: 90%;
+	background-color:#FFF;
+	cursor: pointer;
+}
+
+.email{
+	font-size: 1.4em;
+}
+
+.frmcreate{
+	width: 35%;
+	text-align: center;
+	background: #EBEBEB;
+	border-radius: 5%;
+	margin-left: 33%;
+}
+
+.frmlogin{
+	width: 35%;
+	text-align: center;
+	background: #EBEBEB;
+	border-radius: 5%;
+	margin-left: 33%;
+}
+
+.login{
+	text-align: center;
+	background: #D7F9AF;
+	width: 30%;
+	margin-left: 40%;
+}
+
+.lblEmail{
+	margin-right: 50%;
+}
+
+.lblUser{
+	margin-right: 25%;
+}
+
+.password{
+	width:17%;
+	margin-left: 23.5%;
+	height: 2%;
+	font-size: 1.4em;
+}
+
+.lbl_reg_user{
+	margin-right: 11%;
+}
+
+.lbl_reg_pass{
+	margin-right: 24%;
+}
+
+.lbl_reg_confirm{
+	margin-right: 6%;	
+}
+
+#title /* Titulo de los divs contenedores */
+{	margin-left: -16px;
+	border: 2px solid #999;
+	text-align:center;	
+	padding: 10px 20px;
+	background: #3688C4;
+	border-radius: 10%;
+	color: #FFFFFF;
+	font-size: 1.9em;
+	margin-top: -5%;
+	margin-left: -0.5px;
+}
+
+.registrarse{ 
+	margin-left: 20%;
+	font-size: 1.4em;
+	color: #080303;
+	margin-top: -7%;
+}
+.submit{
+	margin-left: -25%;
+
+}
+.menu{
+	margin-left: 90%;
+	
+}
+/* Crear nueva tarea*/
+
+
+.txt_title_create{
+	margin-right: -13%;
+}
+
+.lbl_title_combo{
+	margin-left: 27%;
+}
+
+.title_descripcion{
+	margin-left: -73%;
+}
+
+.newtask{
+	margin-left: 83%;
+	margin-top: -5.5%;
+}
+
+#frm_descripcion{
+	
+	text-align: center;
+}
+
+.lbl_descripcion{
+	margin-right: -45%;
+}
+
+.divContador{
+	margin-right: -85%;	
+	margin-top: -4%;
+}
+
+/*Prioridad de las tareas*/
+
+.Baja{
+    background-color: #8BDF83;
+    border-color: #105205;
+    border-width: 2px;
+}
+
+.Media{
+    background-color: #F9A173;
+    border-color: #D6660D;
+    border-width: 2px;
+}
+
+.Alta{
+    background-color: #F37676;
+    border-color: #AB0606;
+    border-width: 2px;
+}
+
+
+/* Botón cerrar sesión*/
+.btnlogout{
+	background: #FBFBFB;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.userLogin{
+	margin-left: 1%;
+}

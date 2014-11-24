@@ -1,5 +1,4 @@
 <?php
-
 class RecursoHumanoController extends \BaseController {
 
 	/**
@@ -9,13 +8,13 @@ class RecursoHumanoController extends \BaseController {
 	 */
 	public function index()
 	{
-		$recursoHumano = RecursoHumano::all();
+		$rh = RecursoHumano::all();
         $this->layout->titulo = 'Listado de Recurso Humano';
         $this->layout->nest(
             'content',
-            'recursoHumanos.index',
+            'recursosHumanos.index',
             array(
-                'recursoHumanos' => $recursoHumano
+                'recursosHumanos' => $rh
             )
         );
 	}
@@ -31,7 +30,7 @@ class RecursoHumanoController extends \BaseController {
 		$this->layout->titulo = 'Crear Recurso Humano';
         $this->layout->nest(
             'content',
-            'recursoHumanos.create',
+            'recursosHumanos.create',
             array()
         );
 	}
@@ -44,28 +43,21 @@ class RecursoHumanoController extends \BaseController {
 	 */
 	public function store()
 	{
-		$nom_dir_pro = Input::get("nombre_director_proyecto");
-        $ape2_dir_pro = Input::get("apellido1_director_proyecto");
-        $ape2_dir_pro = Input::get("apellido2_director_proyecto");
-        $nom_patrocinador = Input::get("nombre_patrocinador");
-        $monto = Input::get("monto_proyecto");
-        $presupuesto = Input::get("presupuesto_proyecto");
-        $moneda = Input::get("moneda");
-        $observaciones = Input::get("observaciones");
+		$nom_dir_pro = Input::get("nombre_personal_requerido");
+        $ape2_dir_pro = Input::get("apellido1_personal_requerido");
+        $ape2_dir_pro = Input::get("apellido2_personal_requerido");
+        $especialidad = Input::get("especialidad");
+        $proyecto_id = Input::get("proyecto_id");
 
-        $proyecto = new Proyecto();
-        $proyecto->nombre_director_proyecto = $nom_dir_pro;
-        $proyecto->apellido1_director_proyecto = $ape2_dir_pro;
-        $proyecto->apellido2_director_proyecto = $ape2_dir_pro;
-        $proyecto->nombre_patrocinador = $nom_patrocinador;
-        $proyecto->monto_proyecto = $monto;
-        $proyecto->presupuesto_proyecto = $presupuesto;
-        $proyecto->moneda = $moneda;
-        $proyecto->observaciones = $observaciones;
-        $proyecto->save();
-        return Redirect::to('proyectos');
+        $rh = new RecursoHumano();
+        $rh->nombre_personal_requerido = $nom_dir_pro;
+        $rh->apellido1_personal_requerido = $ape2_dir_pro;
+        $rh->apellido2_personal_requerido = $ape2_dir_pro;        
+        $rh->especialidad = $especialidad;
+        $rh->proyecto_id = $proyecto_id;
+        $rh->save();
+        return Redirect::to('recursosHumanos');
 	}
-
 
 	/**
 	 * Display the specified resource.
@@ -87,7 +79,14 @@ class RecursoHumanoController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$rh = RecursoHumano::find($id);
+        $this->layout->nest(
+            'content',
+            'recursosHumanos.edit',
+            array(
+                'rh' => $rh
+            )
+        );
 	}
 
 
@@ -99,7 +98,20 @@ class RecursoHumanoController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$nom_dir_pro = Input::get("nombre_personal_requerido");
+        $ape2_dir_pro = Input::get("apellido1_personal_requerido");
+        $ape2_dir_pro = Input::get("apellido2_personal_requerido");
+        $especialidad = Input::get("especialidad");
+        $proyecto_id = Input::get("proyecto_id");
+
+        $proyecto = RecursoHumano::find($id);
+        $rh->nombre_personal_requerido = $nom_dir_pro;
+        $rh->apellido1_personal_requerido = $ape2_dir_pro;
+        $rh->apellido2_personal_requerido = $ape2_dir_pro;        
+        $rh->especialidad = $especialidad;
+        $rh->proyecto_id = $proyecto_id;
+        $rh->save();
+        return Redirect::to('recursosHumanos');
 	}
 
 
@@ -111,8 +123,9 @@ class RecursoHumanoController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$rh = RecursoHumano::find($id);
+        $rh->delete();
+        return Redirect::to('recursosHumanos');
 	}
-
 
 }

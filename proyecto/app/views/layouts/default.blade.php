@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Proyecto</title>
+	{{HTML::style('css/style.css');}}
+	{{HTML::style('bootstrap/css/bootstrap.min.css');}}
+	{{HTML::script('bootstrap/js/bootstrap.min.js');}}
 </head>
 <body>
 
-	<?php
-		if (!Auth::check()) {
-			echo "<a href='login'>Login</a> ";
-			echo "<a href='registro'>Registro</a> ";
-			echo "<a href='publica'>Publica</a> ";	
-			echo "<a href='proyectos'>Proyectos</a> ";		
-		}
-		if (Auth::check()) {
-			echo "<a href='publica'>Publica</a> ";
-			echo "<a href='privada'>Privada</a> ";
-			echo "<a href='proyectos'>Proyectos</a> ";
-			
-			echo "<a href='logout'>Cerrar Session</a> ";
-			echo "<h3>Usuario Logueado</h3> ";
-		}
-	?>
+		<?php
+			if (!Auth::check()) {				
+		?>
+			<div class="btn-group" role="group">
+				{{ HTML::linkAction('UserController@index', 'Login', array(), array('class' => 'btn btn-primary')) }}
+				{{ HTML::linkAction('UserController@create', 'Registro', array(), array('class' => 'btn btn-primary')) }}
+				{{ HTML::linkAction('ProyectoController@index', 'Proyecto', array(), array('class' => 'btn btn-primary')) }}
+				{{ HTML::linkAction('RecursoHumanoController@index', 'Recurso Humano', array(), array('class' => 'btn btn-primary')) }}
+			</div>
+		<?php
+			}				
+		?>
+
+		<?php
+			if (Auth::check()) {					
+		?>		
+			<div class="btn-group" role="group">
+				{{ HTML::linkAction('ProyectoController@index', 'Proyecto', array(), array('class' => 'btn btn-primary')) }}
+				{{ HTML::linkAction('RecursoHumanoController@index', 'Recurso Humano', array(), array('class' => 'btn btn-primary')) }}
+				{{ HTML::linkAction('UserController@logout', 'Cerrar Session', array(), array('class' => 'btn btn-primary')) }}
+			</div>
+		<?php 
+				echo "<h3>Usuario Logueado</h3>";
+			}
+		?>
+	
 	{{ $content }}
 </body>
 </html>

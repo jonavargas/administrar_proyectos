@@ -21,7 +21,7 @@ Route::get('auth', 'UserController@isLogged');
 Route::get('publica', 'HomeController@publica');
 
 Route::group(array('before' => 'auth'), function () {
-	Route::get('privada', 'HomeController@privada');
+	Route::get('privada', 'HomeController@privada');	
 	
 });
 
@@ -29,4 +29,7 @@ Route::resource('proyectos', 'ProyectoController');
 Route::post('proyectos/{id}/update', 'ProyectoController@update');
 Route::get('proyectos/{id}/delete', 'ProyectoController@destroy');
 
-Route::resource('recursoHumano', 'RecursoHumanoController');
+
+Route::resource('recursosHumanos', 'RecursoHumanoController');
+Route::post('recursosHumanos/{id}/update', 'RecursoHumanoController@update');
+Route::get('recursosHumanos/{id}/delete', 'RecursoHumanoController@destroy');
