@@ -56,9 +56,9 @@ create table tipo_comunicacion(
 
 create table comunicaciones(
  id serial,
- nombre_persona_a_contactar varchar (30),
- apellido1_persona_a_contactar varchar (30),
- apellido2_persona_a_contactar varchar (30),
+ nombre_contacto varchar (30),
+ apellido1_contacto varchar (30),
+ apellido2_contacto varchar (30),
  metodo_comunicacion varchar (30),
  tipo_comunicacion_id serial,
  constraint pk_comunicaciones primary key (id),
@@ -67,8 +67,8 @@ create table comunicaciones(
 
 create table riesgo_proyecto(
  id serial,
- nombre_riesgo varchar (30),
- descripcion_riesgo varchar (500),
+ nombre varchar (30),
+ descripcion varchar (500),
  solucion varchar (500),
  proyecto_id serial,
  constraint pk_riesgo_proyecto primary key (id),
