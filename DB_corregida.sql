@@ -35,8 +35,10 @@ create table recurso_humano(
 create table interesados(
  id serial,
  nombre varchar (30),
- telefono_contacto varchar (20),
- descripcion_interes varchar (500),
+ apellido1 varchar (30),
+ apellido2 varchar (30),
+ telefono varchar (20),
+ descripcion varchar (500),
  proyecto_id serial,
  constraint pk_interesados primary key (id),
  constraint fk_interesados  foreign key (proyecto_id) references proyecto (id)

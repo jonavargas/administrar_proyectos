@@ -1,4 +1,4 @@
-<h3>Editar Piloto</h3>
+<h3>Editar Recurso Humano</h3>
 
 {{ Form::open(array('url' => "recursosHumanos/$rh->id/update")) }}
 

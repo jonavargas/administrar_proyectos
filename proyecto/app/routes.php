@@ -33,3 +33,7 @@ Route::get('proyectos/{id}/delete', 'ProyectoController@destroy');
 Route::resource('recursosHumanos', 'RecursoHumanoController');
 Route::post('recursosHumanos/{id}/update', 'RecursoHumanoController@update');
 Route::get('recursosHumanos/{id}/delete', 'RecursoHumanoController@destroy');
+
+Route::resource('interesados', 'InteresadosController');
+Route::post('interesados/{id}/update', 'InteresadosController@update');
+Route::get('interesados/{id}/delete', 'InteresadosController@destroy');

@@ -1,4 +1,4 @@
-<h3>Nuevo Proyecto</h3>
+<h3>Nuevo Recurso Humano</h3>
 
 {{ Form::open(array('url' => 'recursosHumanos')) }}
     
