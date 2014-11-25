@@ -17,6 +17,7 @@
 				{{ HTML::linkAction('ProyectoController@index', 'Proyecto', array(), array('class' => 'btn btn-primary')) }}
 				{{ HTML::linkAction('RecursoHumanoController@index', 'Recurso Humano', array(), array('class' => 'btn btn-primary')) }}
 				{{ HTML::linkAction('InteresadosController@index', 'Interesados', array(), array('class' => 'btn btn-primary')) }}
+				{{ HTML::linkAction('TipoComunicacionController@index', 'Tipo de Comunicacion', array(), array('class' => 'btn btn-primary')) }}
 			</div>
 		<?php
 			}				
@@ -26,9 +27,10 @@
 			if (Auth::check()) {					
 		?>		
 			<div class="btn-group" role="group">
-				{{ HTML::linkAction('ProyectoController@index', 'Proyecto', array(), array('class' => 'btn btn-primary')) }}
-				{{ HTML::linkAction('InteresadosController@index', 'Interesados', array(), array('class' => 'btn btn-primary')) }}
+				{{ HTML::linkAction('ProyectoController@index', 'Proyecto', array(), array('class' => 'btn btn-primary')) }}				
 				{{ HTML::linkAction('RecursoHumanoController@index', 'Recurso Humano', array(), array('class' => 'btn btn-primary')) }}
+				{{ HTML::linkAction('InteresadosController@index', 'Interesados', array(), array('class' => 'btn btn-primary')) }}
+				{{ HTML::linkAction('TipoComunicacionController@index', 'Tipo de Comunicacion', array(), array('class' => 'btn btn-primary')) }}
 				{{ HTML::linkAction('UserController@logout', 'Cerrar Session', array(), array('class' => 'btn btn-primary')) }}
 			</div>
 		<?php 

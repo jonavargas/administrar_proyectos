@@ -37,3 +37,7 @@ Route::get('recursosHumanos/{id}/delete', 'RecursoHumanoController@destroy');
 Route::resource('interesados', 'InteresadosController');
 Route::post('interesados/{id}/update', 'InteresadosController@update');
 Route::get('interesados/{id}/delete', 'InteresadosController@destroy');
+
+Route::resource('tipoComunicaciones', 'TipoComunicacionController');
+Route::post('tipoComunicaciones/{id}/update', 'TipoComunicacionController@update');
+Route::get('tipoComunicaciones/{id}/delete', 'TipoComunicacionController@destroy');
