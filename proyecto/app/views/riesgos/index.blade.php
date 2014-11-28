@@ -7,16 +7,17 @@
     }
 ?> 
 
-<table>
+<table class="table table-bordered table-hover">
     <tr >
-        <th ALIGN=center>Nombre Riesgo</th>
-        <th ALIGN=center>Descripción</th>
-        <th ALIGN=center>Solución</th>
-        <th ALIGN=center>Proyecto</th>
+        <th class="th">Nombre Riesgo</th>
+        <th class="th">Descripción</th>
+        <th class="th">Solución</th>
+        <th class="th">Proyecto</th>
 
         <?php
             if (Auth::check()) {                
-                echo '<th colspan="3" ALIGN=center>Acciones</th>';                    
+                echo '<th class="th">Editar</th>';                    
+                echo '<th class="th">Eliminar</th>';                    
             }
         ?>
 
@@ -34,8 +35,10 @@
        
                 if (Auth::check()) {
                     echo '<td ALIGN=center>';
-                    echo "<a href='riesgos/$riesgo->id/edit'>Editar</a> ";
-                    echo "<a href='riesgos/$riesgo->id/delete'>Eliminar</a> ";
+                    echo "<a class='glyphicon glyphicon-pencil' href='riesgos/$riesgo->id/edit'> </a> ";
+                    echo '</td> ';
+                    echo '<td ALIGN=center>';
+                    echo "<a class='glyphicon glyphicon-remove' href='riesgos/$riesgo->id/delete'> </a> ";              
                     echo '</td> ';
                 }
             ?> 

@@ -7,19 +7,20 @@
     }
 ?> 
 
-<table>
+<table class="table table-bordered table-hover">
     <tr >
-        <th ALIGN=center>Nombre de Proyecto</th>
-        <th colspan="3" ALIGN=center>Director de Proyecto</th>
-        <th ALIGN=center>Patrocinador</th>
-        <th ALIGN=center>Monto Proyecto</th>
-        <th ALIGN=center>Presupuesto</th>
-        <th ALIGN=center>Moneda</th>
-        <th ALIGN=center>Observaciones</th>
+        <th class="th">Nombre de Proyecto</th>
+        <th colspan="3" class="th">Director de Proyecto</th>
+        <th class="th">Patrocinador</th>
+        <th class="th">Monto Proyecto</th>
+        <th class="th">Presupuesto</th>
+        <th class="th">Moneda</th>
+        <th class="th">Observaciones</th>
         <?php
             if (Auth::check()) {
                     
-                echo '<th colspan="3" ALIGN=center>Acciones</th>';                    
+                echo '<th class="th">Editar</th>';                    
+                echo '<th class="th">Eliminar</th>';                    
             }
         ?>
 
@@ -27,9 +28,9 @@
     @foreach($proyectos as $proyecto)
         <tr>
             <td ALIGN=center>{{ $proyecto->nombre_proyecto }}</td>
-            <td ALIGN=center>{{ $proyecto->nombre_director_proyecto }}</td>   
-            <td ALIGN=center>{{ $proyecto->apellido1_director_proyecto }}</td>    
-            <td ALIGN=center>{{ $proyecto->apellido2_director_proyecto }}</td>    
+            <td ALIGN=center colspan="3">{{ $proyecto->nombre_director_proyecto }}   
+                                         {{ $proyecto->apellido1_director_proyecto }}    
+                                         {{ $proyecto->apellido2_director_proyecto }}</td>    
             <td ALIGN=center>{{ $proyecto->nombre_patrocinador }}</td>    
             <td ALIGN=center>{{ $proyecto->monto_proyecto }}</td>    
             <td ALIGN=center>{{ $proyecto->presupuesto_proyecto }}</td>    
@@ -40,11 +41,14 @@
        
                 if (Auth::check()) {
                     echo '<td ALIGN=center>';
-                    echo "<a href='proyectos/$proyecto->id/edit'>Editar</a> ";
-                    echo "<a href='proyectos/$proyecto->id/delete'>Eliminar</a> ";
+                    echo "<a class='glyphicon glyphicon-pencil' href='proyectos/$proyecto->id/edit'> </a> ";
+                    echo '</td> ';
+                    echo '<td ALIGN=center>';
+                    echo "<a class='glyphicon glyphicon-remove' href='proyectos/$proyecto->id/delete'> </a> ";              
                     echo '</td> ';
                 }
             ?> 
         </tr>
     @endforeach
 </table> 
+                    

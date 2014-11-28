@@ -7,26 +7,27 @@
     }
 ?> 
 
-<table>
+<table class="table table-bordered table-hover">
     <tr >
-        <th colspan="3" ALIGN=center>Nombre Interesado</th>
-        <th ALIGN=center>Telefono</th>
-        <th ALIGN=center>Descripcion</th>
-        <th ALIGN=center>Proyecto</th>
+        <th colspan="3" class="th">Nombre Interesado</th>
+        <th class="th">Telefono</th>
+        <th class="th">Descripcion</th>
+        <th class="th">Proyecto</th>
 
         <?php
             if (Auth::check()) {
                     
-                echo '<th colspan="3" ALIGN=center>Acciones</th>';                    
+                echo '<th class="th">Editar</th>';                    
+                echo '<th class="th">Eliminar</th>';                    
             }
         ?>
 
     </tr>
     @foreach($interesados as $interesado)
         <tr>
-            <td ALIGN=center>{{ $interesado->nombre }}</td>   
-            <td ALIGN=center>{{ $interesado->apellido1 }}</td>    
-            <td ALIGN=center>{{ $interesado->apellido2 }}</td>    
+            <td colspan="3" ALIGN=center>{{ $interesado->nombre }}
+                                         {{ $interesado->apellido1 }}
+                                         {{ $interesado->apellido2 }}</td>    
             <td ALIGN=center>{{ $interesado->telefono }}</td>
             <td ALIGN=center>{{ $interesado->descripcion }}</td>
             @foreach($proyectos as $proyecto)
@@ -37,8 +38,10 @@
        
                 if (Auth::check()) {
                     echo '<td ALIGN=center>';
-                    echo "<a href='interesados/$interesado->id/edit'>Editar</a> ";
-                    echo "<a href='interesados/$interesado->id/delete'>Eliminar</a> ";
+                    echo "<a class='glyphicon glyphicon-pencil' href='interesados/$interesado->id/edit'> </a> ";
+                    echo '</td> ';
+                    echo '<td ALIGN=center>';
+                    echo "<a class='glyphicon glyphicon-remove' href='interesados/$interesado->id/delete'> </a> ";              
                     echo '</td> ';
                 }
             ?> 

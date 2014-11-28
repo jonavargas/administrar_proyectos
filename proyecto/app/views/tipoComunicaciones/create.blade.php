@@ -3,10 +3,12 @@
 {{ Form::open(array('url' => 'tipoComunicaciones')) }}
     
     {{ Form::label('tipo_comunicacion', 'Tipo Comunicacion') }}
-    {{ Form::text('tipo_comunicacion', '') }}
+    {{ Form::select('tipo_comunicacion', array('Teléfono' => 'Teléfono', 'Email' => 'Email',
+     'Reunion Presencial' => 'Reunion Presencial','Video Llamada' => 'Video Llamada',
+     'Otro' => 'Otro'), null,array('id' => 'combobox')) }}
 
-    {{ Form::label('detalle', 'Detalle') }}
-    {{ Form::text('detalle', '') }}
+    {{ Form::label('detalle', 'Detalle del tipo de comunicación') }}
+    {{ Form::textArea('detalle', '') }}
 
     {{ Form::label('proyecto_id', 'Proyectos') }}
     

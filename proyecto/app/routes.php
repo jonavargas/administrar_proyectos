@@ -45,3 +45,7 @@ Route::get('tipoComunicaciones/{id}/delete', 'TipoComunicacionController@destroy
 Route::resource('riesgos', 'RiesgosController');
 Route::post('riesgos/{id}/update', 'RiesgosController@update');
 Route::get('riesgos/{id}/delete', 'RiesgosController@destroy');
+
+Route::resource('comunicaciones', 'ComunicacionesController');
+Route::post('comunicaciones/{id}/update', 'ComunicacionesController@update');
+Route::get('comunicaciones/{id}/delete', 'ComunicacionesController@destroy');

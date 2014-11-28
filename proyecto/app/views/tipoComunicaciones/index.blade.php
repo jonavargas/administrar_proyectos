@@ -7,16 +7,17 @@
     }
 ?> 
 
-<table>
+<table class="table table-bordered table-hover">
     <tr >
-        <th ALIGN=center>Tipo Comunicacion</th>
-        <th ALIGN=center>Detalle</th>
-        <th ALIGN=center>Proyecto</th>
+        <th class="th">Tipo Comunicacion</th>
+        <th class="th">Detalle del tipo de comunicación</th>
+        <th class="th">Proyecto</th>
 
         <?php
             if (Auth::check()) {
                     
-                echo '<th colspan="3" ALIGN=center>Acciones</th>';                    
+                echo '<th class="th">Editar</th>';                    
+                echo '<th class="th">Eliminar</th>';                    
             }
         ?>
 
@@ -33,8 +34,10 @@
        
                 if (Auth::check()) {
                     echo '<td ALIGN=center>';
-                    echo "<a href='tipoComunicaciones/$t_comunicacion->id/edit'>Editar</a> ";
-                    echo "<a href='tipoComunicaciones/$t_comunicacion->id/delete'>Eliminar</a> ";
+                    echo "<a class='glyphicon glyphicon-pencil' href='tipoComunicaciones/$t_comunicacion->id/edit'> </a> ";
+                    echo '</td> ';
+                    echo '<td ALIGN=center>';
+                    echo "<a class='glyphicon glyphicon-remove' href='tipoComunicaciones/$t_comunicacion->id/delete'> </a> ";              
                     echo '</td> ';
                 }
             ?> 

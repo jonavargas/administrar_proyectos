@@ -7,25 +7,26 @@
     }
 ?> 
 
-<table>
+<table class="table table-bordered table-hover">
     <tr >
-        <th colspan="3" ALIGN=center>Nombre Personal Requerido</th>
-        <th ALIGN=center>Especialidad</th>
-        <th ALIGN=center>Proyectos</th>
+        <th colspan="3" class="th">Nombre Personal Requerido</th>
+        <th class="th">Especialidad</th>
+        <th class="th">Proyectos</th>
 
         <?php
             if (Auth::check()) {
                     
-                echo '<th colspan="3" ALIGN=center>Acciones</th>';                    
+                echo '<th class="th">Editar</th>';                    
+                echo '<th class="th">Eliminar</th>';                    
             }
         ?>
 
     </tr>
     @foreach($recursosHumanos as $rh)
         <tr>
-            <td ALIGN=center>{{ $rh->nombre_personal_requerido }}</td>   
-            <td ALIGN=center>{{ $rh->apellido1_personal_requerido }}</td>    
-            <td ALIGN=center>{{ $rh->apellido2_personal_requerido }}</td>    
+            <td colspan="3" ALIGN=center>{{ $rh->nombre_personal_requerido }}
+                             {{ $rh->apellido1_personal_requerido }}
+                             {{ $rh->apellido2_personal_requerido }}</td>    
             <td ALIGN=center>{{ $rh->especialidad }}</td>    
             @foreach($proyectos as $proyecto)
                 <td ALIGN=center>{{ $proyecto->nombre_proyecto }}</td>
@@ -35,8 +36,10 @@
        
                 if (Auth::check()) {
                     echo '<td ALIGN=center>';
-                    echo "<a href='recursosHumanos/$rh->id/edit'>Editar</a> ";
-                    echo "<a href='recursosHumanos/$rh->id/delete'>Eliminar</a> ";
+                    echo "<a class='glyphicon glyphicon-pencil' href='recursosHumanos/$rh->id/edit'> </a> ";
+                    echo '</td> ';
+                    echo '<td ALIGN=center>';
+                    echo "<a class='glyphicon glyphicon-remove' href='recursosHumanos/$rh->id/delete'> </a> ";              
                     echo '</td> ';
                 }
             ?> 
@@ -44,3 +47,4 @@
     @endforeach
         
 </table> 
+                   
