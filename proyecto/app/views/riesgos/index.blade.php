@@ -1,11 +1,11 @@
 <?php
-
     if (Auth::check()) {
-        
-        echo "<a href='riesgos/create'>Crear Nuevo Riesgo</a> ";
-
+?>        
+        <div class="newtask">{{link_to("riesgos/create", 'Crear', $attributes = array('class' => 'btn btn-primary'), $secure = null);}}</div>
+<?php
     }
-?> 
+?>
+
 
 <table class="table table-bordered table-hover">
     <tr >

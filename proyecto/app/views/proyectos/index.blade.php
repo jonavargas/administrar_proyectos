@@ -1,9 +1,8 @@
 <?php
-
     if (Auth::check()) {
-        
-        echo "<a href='proyectos/create'>Crear Nuevo Proyecto</a> ";
-
+?>        
+        <div class="newtask">{{link_to("proyectos/create", 'Crear Proyecto Nuevo', $attributes = array('class' => 'btn btn-primary'), $secure = null);}}</div>
+<?php
     }
 ?> 
 

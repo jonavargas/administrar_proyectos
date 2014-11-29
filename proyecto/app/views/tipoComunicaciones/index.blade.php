@@ -1,11 +1,11 @@
 <?php
-
     if (Auth::check()) {
-        
-        echo "<a href='tipoComunicaciones/create'>Crear Nuevo tipo de comunicacion</a> ";
-
+?>        
+        <div class="newtask">{{link_to("tipoComunicaciones/create", 'Crear', $attributes = array('class' => 'btn btn-primary'), $secure = null);}}</div>
+<?php
     }
 ?> 
+
 
 <table class="table table-bordered table-hover">
     <tr >

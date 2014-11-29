@@ -49,3 +49,8 @@ Route::get('riesgos/{id}/delete', 'RiesgosController@destroy');
 Route::resource('comunicaciones', 'ComunicacionesController');
 Route::post('comunicaciones/{id}/update', 'ComunicacionesController@update');
 Route::get('comunicaciones/{id}/delete', 'ComunicacionesController@destroy');
+
+Route::resource('alcancesProyectos', 'AlcanceProyectoController');
+Route::post('alcancesProyectos/{id}/update', 'AlcanceProyectoController@update');
+Route::get('alcancesProyectos/{id}/delete', 'AlcanceProyectoController@destroy');
+

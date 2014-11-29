@@ -77,7 +77,9 @@ create table riesgo_proyecto(
 
 create table alcance_proyecto(
  id serial,
- responsable varchar(30),
+ nombre_responsable character varying(30),
+ apellido1 character varying(30),
+ apellido2 character varying(30),
  nombre_actividad varchar(50),
  descripcion varchar (500),
  calidad varchar (10),

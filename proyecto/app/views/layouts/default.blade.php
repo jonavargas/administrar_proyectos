@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Proyecto</title>
+	{{HTML::script('js/jquery-2.1.1.min.js');}}
 	{{HTML::style('css/style.css');}}
 	{{HTML::style('bootstrap/css/bootstrap.min.css');}}
 	{{HTML::script('bootstrap/js/bootstrap.min.js');}}
@@ -20,6 +21,8 @@
 				{{ HTML::linkAction('TipoComunicacionController@index', 'Tipo de Comunicacion', array(), array('class' => 'btn btn-primary')) }}
 				{{ HTML::linkAction('ComunicacionesController@index', 'Comunicaciones', array(), array('class' => 'btn btn-primary')) }}
 				{{ HTML::linkAction('RiesgosController@index', 'Riesgo Proyecto', array(), array('class' => 'btn btn-primary')) }}
+				{{ HTML::linkAction('AlcanceProyectoController@index', 'Alcances Proyectos', array(), array('class' => 'btn btn-primary')) }}
+				
 			</div>
 		<?php
 			}				
@@ -35,6 +38,7 @@
 				{{ HTML::linkAction('TipoComunicacionController@index', 'Tipo de Comunicacion', array(), array('class' => 'btn btn-primary')) }}
 				{{ HTML::linkAction('ComunicacionesController@index', 'Comunicaciones', array(), array('class' => 'btn btn-primary')) }}
 				{{ HTML::linkAction('RiesgosController@index', 'Riesgo Proyecto', array(), array('class' => 'btn btn-primary')) }}
+				{{ HTML::linkAction('AlcanceProyectoController@index', 'Alcances Proyectos', array(), array('class' => 'btn btn-primary')) }}
 				{{ HTML::linkAction('UserController@logout', 'Cerrar Session', array(), array('class' => 'btn btn-primary')) }}
 			</div>
 		<?php 
