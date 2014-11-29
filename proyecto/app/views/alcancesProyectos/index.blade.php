@@ -60,17 +60,8 @@
 
 
 
-        <input type="text" name="date15" value="">
-        <script type="text/javascript">
-            $(function(){
-                $('*[name=date15]').appendDtpicker({
-                    "inline": true,
-                    "dateOnly": true,                    
-                    "dateFormat": "DD-MM-YYYY"
-                });
-            });
-        </script>
+       
       
 
 
-{{HTML::script('js/js.js');}}
+

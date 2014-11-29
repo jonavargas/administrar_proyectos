@@ -1,21 +1,27 @@
 <h3>Editar Proyecto</h3>
 
-{{ Form::open(array('url' => "interesados/$interesado->id/update")) }}
+{{ Form::open(array('url' => "alcancesProyectos/$alcance_proyecto->id/update")) }}
 
-    {{ Form::label('nombre', 'Nombre') }}
-    {{ Form::text('nombre', $interesado->nombre) }}
+    {{ Form::label('nombre', 'Nombre Responsable') }}
+    {{ Form::text('nombre_responsable', $alcance_proyecto->nombre_responsable) }}
 
     {{ Form::label('apellido1', 'Apellido 1') }}
-    {{ Form::text('apellido1', $interesado->apellido1) }}
+    {{ Form::text('apellido1', $alcance_proyecto->apellido1) }}
 
     {{ Form::label('apellido2', 'Apellido') }}
-    {{ Form::text('apellido2', $interesado->apellido2) }}
+    {{ Form::text('apellido2', $alcance_proyecto->apellido2) }}
     
-    {{ Form::label('telefono', 'Telefono') }}
-    {{ Form::text('telefono', $interesado->telefono) }}
+    {{ Form::label('nombre_actividad', 'Nombre Actividad') }}
+    {{ Form::text('nombre_actividad', $alcance_proyecto->nombre_actividad) }}
 
     {{ Form::label('descripcion', 'Descripcion') }}
-    {{ Form::text('descripcion', $interesado->descripcion) }}
+    {{ Form::text('descripcion', $alcance_proyecto->descripcion) }}
+
+    {{ Form::label('calidad', 'Calidad') }}
+    {{ Form::text('calidad', $alcance_proyecto->calidad) }}
+
+    {{ Form::label('fecha', 'Fecha Estimada') }}
+    {{ Form::text('fecha', $alcance_proyecto->fecha_estimada) }}
 
     {{ Form::label('proyecto_id', 'Proyectos') }}   
 

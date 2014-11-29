@@ -55,7 +55,7 @@ class AlcanceProyectoController extends \BaseController {
         $nombre_actividad = Input::get("nombre_actividad");
         $descripcion = Input::get("descripcion");
         $calidad = Input::get("calidad");
-        $fecha_estimada = Input::get("fecha_estimada");       
+        $fecha_estimada = Input::get("fecha");       
         $proyecto_id = Input::get("proyecto");/////////////////// del combo box
 
         $alcance_proyecto = new AlcanceProyecto();
@@ -118,7 +118,7 @@ class AlcanceProyectoController extends \BaseController {
         $nombre_actividad = Input::get("nombre_actividad");
         $descripcion = Input::get("descripcion");
         $calidad = Input::get("calidad");
-        $fecha_estimada = Input::get("fecha_estimada");       
+        $fecha_estimada = Input::get("fecha");       
         $proyecto_id = Input::get("proyecto");/////////////////// del combo box
 
         $alcance_proyecto = AlcanceProyecto::find($id);

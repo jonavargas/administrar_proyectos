@@ -7,7 +7,7 @@
 ?> 
 
 <table class="table table-bordered table-hover">
-    <tr >
+    <tr class="tr" >
         <th class="th">Nombre de Proyecto</th>
         <th colspan="3" class="th">Director de Proyecto</th>
         <th class="th">Patrocinador</th>
