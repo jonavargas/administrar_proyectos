@@ -54,3 +54,6 @@ Route::resource('alcancesProyectos', 'AlcanceProyectoController');
 Route::post('alcancesProyectos/{id}/update', 'AlcanceProyectoController@update');
 Route::get('alcancesProyectos/{id}/delete', 'AlcanceProyectoController@destroy');
 
+Route::resource('adquisiciones', 'AdquisicionesController');
+Route::post('adquisiciones/{id}/update', 'AdquisicionesController@update');
+Route::get('adquisiciones/{id}/delete', 'AdquisicionesController@destroy');
