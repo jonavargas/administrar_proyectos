@@ -57,3 +57,8 @@ Route::get('alcancesProyectos/{id}/delete', 'AlcanceProyectoController@destroy')
 Route::resource('adquisiciones', 'AdquisicionesController');
 Route::post('adquisiciones/{id}/update', 'AdquisicionesController@update');
 Route::get('adquisiciones/{id}/delete', 'AdquisicionesController@destroy');
+
+Route::resource('cronogramas', 'CronogramaController');
+Route::post('cronogramas/{id}/update', 'CronogramaController@update');
+Route::get('cronogramas/{id}/delete', 'CronogramaController@destroy');
+

@@ -24,6 +24,7 @@
 				{{ HTML::linkAction('RiesgosController@index', 'Riesgo Proyecto', array(), array('class' => 'btn btn-primary')) }}
 				{{ HTML::linkAction('AlcanceProyectoController@index', 'Alcances Proyectos', array(), array('class' => 'btn btn-primary')) }}
 				{{ HTML::linkAction('AdquisicionesController@index', 'Adquisiciones', array(), array('class' => 'btn btn-primary')) }}
+				{{ HTML::linkAction('CronogramaController@index', 'Cronograma', array(), array('class' => 'btn btn-primary')) }}
 			</div>
 		<?php
 			}				
@@ -41,6 +42,7 @@
 				{{ HTML::linkAction('RiesgosController@index', 'Riesgo Proyecto', array(), array('class' => 'btn btn-primary')) }}
 				{{ HTML::linkAction('AlcanceProyectoController@index', 'Alcances Proyectos', array(), array('class' => 'btn btn-primary')) }}
 				{{ HTML::linkAction('AdquisicionesController@index', 'Adquisiciones', array(), array('class' => 'btn btn-primary')) }}
+				{{ HTML::linkAction('CronogramaController@index', 'Cronograma', array(), array('class' => 'btn btn-primary')) }}
 				{{ HTML::linkAction('UserController@logout', 'Cerrar Session', array(), array('class' => 'btn btn-primary')) }}
 			</div>
 		<?php 
