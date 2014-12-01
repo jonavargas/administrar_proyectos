@@ -112,6 +112,7 @@ create table cronograma(
 
 create table costo(
  id serial,
+ nombre_actividad varchar(100),
  costo_actividad double precision,
  alcance_proyecto_id serial,
  constraint pk_costo primary key (id),

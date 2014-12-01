@@ -62,3 +62,7 @@ Route::resource('cronogramas', 'CronogramaController');
 Route::post('cronogramas/{id}/update', 'CronogramaController@update');
 Route::get('cronogramas/{id}/delete', 'CronogramaController@destroy');
 
+Route::resource('costos', 'CostoController');
+Route::post('costos/{id}/update', 'CostoController@update');
+Route::get('costos/{id}/delete', 'CostoController@destroy');
+

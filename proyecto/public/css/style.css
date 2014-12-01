@@ -19,6 +19,14 @@
 	border-radius: 5%;
 	margin-left: 33%;
 }
+.frmcreateProyecto{
+	width: 50%;
+	text-align: center;
+	background: #78B2F3;
+	border-radius: 5%;
+	margin-left: 25%;
+	margin-top: 4%;
+}
 .email{
 	font-size: 1.4em;
 	margin-right: -10%;
@@ -48,6 +56,9 @@
 .lblEmail{
 	margin-right: 35%;
 }
+.lblEmail1{
+	margin-right: 26%;
+}
 
 .lblUser{
 	margin-right: 42%;
@@ -58,6 +69,8 @@
 	margin-left: 28.9%;
 	height: 2%;
 	font-size: 1.4em;
+}
+
 }
 .submit{
 	margin-left: 3%;
