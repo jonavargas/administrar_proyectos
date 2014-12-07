@@ -18,6 +18,7 @@
 	background: #78B2F3;
 	border-radius: 5%;
 	margin-left: 33%;
+	margin-top: 3%;
 }
 .frmcreateProyecto{
 	width: 52%;
@@ -124,11 +125,52 @@
 	margin-left: 84%;
 	margin-top: -4%;
 }
+/****************************************************************************************************************/
+.lblRecursos{
+	margin-left: -55%;
+}
+.lblRecursoPA{
+	margin-left: -45%;
+}
+.lblRecursoSA{
+	margin-left: -40%;
+}
+.lblTelefono{
+	margin-left: -52%;
+}
+.lblEspecialidad{
+	margin-left: -46%;
+}
+.txtRecursos{
+	margin-left: 25%;
+	margin-top: -7%;
+}
+.lblProyecto{
+	margin-left: -49%;
+}
+.cmbProyecto{
+	margin-left: -5%;
+	margin-top: -6%;
+}
+.btnCreate{
+	margin-left: -25%;
+}
+.btnRegresar{
+	margin-left: 25%;
+	margin-top: -7%;
+
+}
+.btnback{
+	margin-top: -5%;
+	margin-left: 25%;
+}
+.lblDescripcion{
+	margin-left: -48%;
+}
 
 
 
-
-/*******************************************************************/
+/****************************************************************************************************************/
 
 /**
  * Style-sheet for dtpicker

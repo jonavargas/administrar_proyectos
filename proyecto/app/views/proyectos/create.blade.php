@@ -51,13 +51,13 @@
     <div>{{ Form::textarea('observaciones', null, ['size' => '30x5']) }}</div>
     <br>
     <br>
-    <div>{{Form::submit('Crear', array('class' => 'btn btn-default'))}}</div>
+    <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-default'))}}</div>
+     <div class="btnback">{{ HTML::linkAction('ProyectoController@index', 'Back', array(), array('class' => 'btn btn-default')) }}</div>
     <br>
 
 {{ Form::close() }}
     
     
-
 </div>
 
 
