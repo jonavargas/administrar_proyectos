@@ -1,4 +1,4 @@
-<h3>Editar Adquisición</h3>
+<h3>Editar Costo</h3>
 
 {{ Form::open(array('url' => "costos/$costos->id/update")) }}
 

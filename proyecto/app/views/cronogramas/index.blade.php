@@ -7,7 +7,7 @@
 ?> 
 
 <table class="table table-bordered table-hover">
-    <tr >
+    <tr class="tr" >
         <th class="th">Fecha Inicio</th>
         <th class="th">Fecha Fin</th>
         <th class="th">Duracion</th>       

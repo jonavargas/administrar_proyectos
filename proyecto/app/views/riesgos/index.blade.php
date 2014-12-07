@@ -8,7 +8,7 @@
 
 
 <table class="table table-bordered table-hover">
-    <tr >
+    <tr class="tr">
         <th class="th">Nombre Riesgo</th>
         <th class="th">Descripción</th>
         <th class="th">Solución</th>

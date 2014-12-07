@@ -7,7 +7,7 @@
 ?> 
 
 <table class="table table-bordered table-hover">
-    <tr >
+    <tr class="tr">
         <th colspan="3" class="th">Nombre Responsable</th>
         <th class="th">Nombre Actividad</th>
         <th class="th">Descripcion</th>

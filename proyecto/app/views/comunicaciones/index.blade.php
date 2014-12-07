@@ -7,7 +7,7 @@
 ?> 
 
 <table class="table table-bordered table-hover">
-    <tr >
+    <tr class="tr" >
         <th colspan="3"  class="th">Nombre Contacto</th>
         <th class="th">Metodo de Comunicación</th>
         <th class="th">Tipo de comunicación</th>

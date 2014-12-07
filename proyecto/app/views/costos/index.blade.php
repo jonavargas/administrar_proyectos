@@ -7,7 +7,7 @@
 ?> 
 
 <table class="table table-bordered table-hover">
-    <tr >
+    <tr class="tr" >
         <th class="th">Nombre Actividad</th> 
         <th class="th">Costo Actividad</th>               
 

@@ -8,7 +8,7 @@
 
 
 <table class="table table-bordered table-hover">
-    <tr >
+    <tr class="tr">
         <th class="th">Tipo Comunicacion</th>
         <th class="th">Detalle del tipo de comunicación</th>
         <th class="th">Proyecto</th>

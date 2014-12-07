@@ -22,6 +22,16 @@
 
     {{ Form::label('fecha', 'Fecha Estimada') }}
     {{ Form::text('fecha', $alcance_proyecto->fecha_estimada) }}
+    
+    <script type="text/javascript">
+            $(function(){
+                $('*[id=fecha]').appendDtpicker({
+                    "inline": true,
+                    "dateOnly": true,                    
+                    "dateFormat": "DD-MM-YYYY"
+                });
+            });
+    </script>
 
     {{ Form::label('proyecto_id', 'Proyectos') }}   
 
@@ -35,3 +45,4 @@
     {{Form::submit('Salvar', array())}}
 
 {{ Form::close() }}
+{{HTML::script('js/js.js');}}

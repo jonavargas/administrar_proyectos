@@ -1,4 +1,4 @@
-<h3>Nueva Adquisición</h3>
+<h3>Nuevo Costo</h3>
 
 {{ Form::open(array('url' => 'costos')) }}
 

@@ -7,7 +7,7 @@
 ?> 
 
 <table class="table table-bordered table-hover">
-    <tr >
+    <tr class="tr">
         <th colspan="3" class="th">Nombre Personal Requerido</th>
         <th class="th">Especialidad</th>
         <th class="th">Proyectos</th>

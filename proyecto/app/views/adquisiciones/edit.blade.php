@@ -8,6 +8,14 @@
     {{ Form::label('costo_adquisicion', 'Costo Adquisición') }}
     {{ Form::number('costo_adquisicion', $adquisiciones->costo_adquisicion) }}
 
+    {{ Form::label('alcance_proyecto_id', 'Alcances') }}   
+
+    <select name="alcacne">
+        @foreach($alcances as $alcacne)
+            <option value={{$alcacne->id}}>{{$alcacne->nombre_actividad}}</option>
+        @endforeach
+    </select>
+
     {{Form::submit('Salvar', array())}}
 
 {{ Form::close() }}

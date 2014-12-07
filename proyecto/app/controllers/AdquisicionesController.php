@@ -35,7 +35,7 @@ class AdquisicionesController extends \BaseController {
             'adquisiciones.create',
             array(       
             //'adquisicion' => $adquisicion
-            'alcances' => $alcance     	       
+            	'alcances' => $alcance     	       
             )
         );
 
@@ -50,13 +50,14 @@ class AdquisicionesController extends \BaseController {
 	public function store()
 	{
 		$nombre_adquisicion = Input::get("nombre_adquisicion");
-        $costo_adquisicion = Input::get("costo_adquisicion");
-		$id = Input::get("id");
+        $costo_adquisicion = Input::get("costo_adquisicion");		
+		$alcance_proyecto_id = Input::get("alcance");
 
         $adquisicion = new Adquisiciones();
         $adquisicion->nombre_adquisicion = $nombre_adquisicion;        
         $adquisicion->costo_adquisicion = $costo_adquisicion;
-        $adquisicion->alcance_proyecto_id = $id;
+        
+        $adquisicion->alcance_proyecto_id = $alcance_proyecto_id;
   
         $adquisicion->save();
         return Redirect::to('adquisiciones');
@@ -82,16 +83,17 @@ class AdquisicionesController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$adquisicion = Adquisiciones::find($id);		
+		$adquisicion = Adquisiciones::find($id);	
+		$alcance =AlcanceProyecto::all();	
         $this->layout->nest(
             'content',
             'adquisiciones.edit',
             array(            	
-                'adquisiciones' => $adquisicion
+                'adquisiciones' => $adquisicion,
+                'alcances' =>$alcance
             )
         );
 	}
-
 
 	/**
 	 * Update the specified resource in storage.

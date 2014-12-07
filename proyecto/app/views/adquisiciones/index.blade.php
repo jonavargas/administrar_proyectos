@@ -7,9 +7,10 @@
 ?> 
 
 <table class="table table-bordered table-hover">
-    <tr >
+    <tr class="tr">
         <th class="th">Nombre Adquisicion</th>
-        <th class="th">Costo Adquisicion</th>        
+        <th class="th">Costo Adquisicion</th> 
+        <th class="th">Alcance</th>       
 
         <?php
             if (Auth::check()) {
@@ -22,8 +23,9 @@
     </tr>
     @foreach($adquisiciones as $adquisicion)
         <tr>            
-            <td ALIGN=center>{{ $adquisicion->nombre_adquisicion }}  
-            <td ALIGN=center>{{ $adquisicion->costo_adquisicion }}</td>            
+            <td ALIGN=center>{{ $adquisicion->nombre_adquisicion }}</td>  
+            <td ALIGN=center>{{ $adquisicion->costo_adquisicion }}</td>  
+            <td ALIGN=center>{{ $adquisicion->alcance_id }}</td>          
              
             <?php
        
