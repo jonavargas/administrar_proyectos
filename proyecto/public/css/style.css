@@ -7,7 +7,7 @@
 	text-align: center;
 }
 
-#eliminar{ /* Eliminar tarea en el dashboard */
+#eliminar{ /* Eliminar*/
 	float: right;
 	margin-right: 3%;
 	margin-top: -8%;
@@ -336,6 +336,21 @@
 .cmbAlcan{
 	margin-left: 1%;
 	margin-top: -8%;
+}
+
+/** Consultas **/
+.form-control{
+	width: 30%;
+}
+
+#con_proy{
+	margin-left: 28%;
+}
+
+.submit_con{
+	margin-left: 18%;	
+	margin-top: -3.5%;
+	margin-bottom: 5%;
 }
 
 /****************************************************************************************************************/
