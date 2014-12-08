@@ -129,4 +129,3 @@ class AdquisicionesController extends \BaseController {
         return Redirect::to('adquisiciones');
 	}
 }
-

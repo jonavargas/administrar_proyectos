@@ -1,7 +1,7 @@
 <body class="body">
     <div class="frmcreate">
         <br>
-        <h3>Nuevo Riesgo</h3>
+        <h3 class="titulos">Nuevo Riesgo</h3>
 
 {{ Form::open(array('url' => 'riesgos')) }}
     <br>
@@ -27,7 +27,7 @@
     </div>
     <br>
     <br>
-    <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-default'))}}</div>
+    <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-success'))}}</div>
     <div class="btnbackSol">{{ HTML::linkAction('RiesgosController@index', 'Back', array(), array('class' => 'btn btn-default')) }}</div>
     <br>
 {{ Form::close() }}

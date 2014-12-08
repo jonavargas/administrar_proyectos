@@ -1,7 +1,7 @@
 <body class="body">
     <div class="frmcreate">
     <br>
-    <h3>Nuevo Interesado</h3>
+    <h3 class="titulos">Nuevo Interesado</h3>
     <br>
     {{ Form::open(array('url' => 'interesados')) }}
     
@@ -35,7 +35,7 @@
         </div>
           <br>
         <br>
-        <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-default'))}}</div>
+        <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-success'))}}</div>
         <div class="btnRegresar">{{ HTML::linkAction('InteresadosController@index', 'Back', array(), array('class' => 'btn btn-default')) }}</div>
         <br>
 

@@ -38,6 +38,18 @@
 	color: #F41414;
 }
 
+.glyphicon-pencil:hover{
+	text-decoration: none;
+	color: #EE871C;	
+}
+
+.lnk_logout{
+	float: right;
+	position: relative;
+	margin-top: 6%;
+	margin-right: 3%;
+}
+
 .frmlogin{
 	margin-top: 5%;
 	width: 35%;
@@ -80,6 +92,14 @@
 .tr{
 	background:#78B2F3;
 
+}
+
+.group_1{
+	margin-left: 4%;
+}
+
+.group_2{
+	margin-left: 0.7%;
 }
 
 .table-bordered{
@@ -185,15 +205,23 @@
 .btnCreate{
 	margin-left: -25%;
 }
+.btnCreateCro{
+	margin-left: -40%;
+}
 .btnRegresar{
 	margin-left: 25%;
 	margin-top: -7%;
 
 }
+.btnRegresarCro{
+	margin-left: 20%;
+	margin-top: -8.5%;
+}
 .btnback{
 	margin-top: -5%;
 	margin-left: 25%;
 }
+
 .btnbackAlc{
 	margin-top: -3.5%;
 	margin-left: 15%;
@@ -229,6 +257,15 @@
 }
 .titulos{
 	text-align: center;
+	margin-left: 3%;
+	text-shadow: 0 0 10px #fff,
+                   0 0 20px #fff,
+                   0 0 30px #fff,
+                   0 0 40px #1A4CED,
+                   0 0 70px #1A4CED,
+                   0 0 80px #1A4CED,
+                   0 0 100px #1A4CED,
+                   0 0 150px #1A4CED;
 }
 .btn-info{
 	background: #78B2F3;
@@ -279,7 +316,27 @@
 	margin-left: 70%;
 	margin-top: -5.5%;
 }
-
+.inp{
+	margin-left: 20%;
+	margin-top: -7%;
+}
+.FI{
+	margin-left: -40%;
+}
+.FN{
+	margin-left: -40%;
+}
+.DU{
+	margin-left: -80%;
+}
+.txtDu{
+	margin-left: 1%;
+	margin-top: -14%;
+}
+.cmbAlcan{
+	margin-left: 1%;
+	margin-top: -8%;
+}
 
 /****************************************************************************************************************/
 

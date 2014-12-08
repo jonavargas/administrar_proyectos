@@ -13,9 +13,8 @@
 		<?php
 			if (!Auth::check()) {				
 		?>
-			<div class="btn-group" role="group">
-				{{ HTML::linkAction('UserController@index', 'Login', array(), array('class' => 'btn btn-info')) }}
-				{{ HTML::linkAction('UserController@create', 'Registro', array(), array('class' => 'btn btn-info')) }}
+			<div class="btn-group group_1" role="group">
+				{{ HTML::linkAction('UserController@index', 'Login', array(), array('class' => 'btn btn-info')) }}				
 				{{ HTML::linkAction('ProyectoController@index', 'Proyecto', array(), array('class' => 'btn btn-info')) }}
 				{{ HTML::linkAction('RecursoHumanoController@index', 'Recurso Humano', array(), array('class' => 'btn btn-info')) }}
 				{{ HTML::linkAction('InteresadosController@index', 'Interesados', array(), array('class' => 'btn btn-info')) }}
@@ -25,8 +24,7 @@
 				{{ HTML::linkAction('AlcanceProyectoController@index', 'Alcances Proyectos', array(), array('class' => 'btn btn-info')) }}
 				{{ HTML::linkAction('AdquisicionesController@index', 'Adquisiciones', array(), array('class' => 'btn btn-info')) }}
 				{{ HTML::linkAction('CronogramaController@index', 'Cronograma', array(), array('class' => 'btn btn-info')) }}
-				{{ HTML::linkAction('CostoController@index', 'Costos', array(), array('class' => 'btn btn-info')) }}
-				{{ HTML::linkAction('ConsultasController@index', 'Consultas', array(), array('class' => 'btn btn-info')) }}
+				{{ HTML::linkAction('CostoController@index', 'Costos', array(), array('class' => 'btn btn-info')) }}				
 			</div>
 		<?php
 			}				
@@ -35,7 +33,8 @@
 		<?php
 			if (Auth::check()) {					
 		?>		
-			<div class="btn-group" role="group">
+			<div class="btn-group group_2" role="group">
+				{{ HTML::linkAction('UserController@create', 'Registro', array(), array('class' => 'btn btn-info')) }}
 				{{ HTML::linkAction('ProyectoController@index', 'Proyecto', array(), array('class' => 'btn btn-info')) }}				
 				{{ HTML::linkAction('RecursoHumanoController@index', 'Recurso Humano', array(), array('class' => 'btn btn-info')) }}
 				{{ HTML::linkAction('InteresadosController@index', 'Interesados', array(), array('class' => 'btn btn-info')) }}
@@ -46,8 +45,10 @@
 				{{ HTML::linkAction('AdquisicionesController@index', 'Adquisiciones', array(), array('class' => 'btn btn-info')) }}
 				{{ HTML::linkAction('CronogramaController@index', 'Cronograma', array(), array('class' => 'btn btn-info')) }}
 				{{ HTML::linkAction('CostoController@index', 'Costos', array(), array('class' => 'btn btn-info')) }}
-				{{ HTML::linkAction('ConsultasController@index', 'Consultas', array(), array('class' => 'btn btn-info')) }}
-				{{ HTML::linkAction('UserController@logout', 'Cerrar Session', array(), array('class' => 'btn btn-info')) }}
+				{{ HTML::linkAction('ConsultasController@index', 'Consultas', array(), array('class' => 'btn btn-info')) }}				
+			</div>
+			<div class="lnk_logout">				
+				{{ HTML::linkAction('UserController@logout', 'Cerrar Session', array(), array('class' => 'btn btn-warning')) }}
 			</div>
 		<?php 
 				
@@ -57,3 +58,4 @@
 	{{ $content }}
 </body>
 </html>
+{{HTML::script('js/js.js');}}

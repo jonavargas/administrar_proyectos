@@ -2,7 +2,7 @@
     
     <div class="frmCreateAlcance">
         <br>        
-        <h3>Editar Proyecto</h3>
+        <h3 class="titulos">Editar Proyecto</h3>
         {{ Form::open(array('url' => "alcancesProyectos/$alcance_proyecto->id/update")) }}
         <br>
         <h4><strong>Responsable</strong></h4>

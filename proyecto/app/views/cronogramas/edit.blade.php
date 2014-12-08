@@ -1,59 +1,64 @@
-<h3>Editar Cronograma</h3>
-
-{{ Form::open(array('url' => "cronogramas/$cronograma->id/update")) }}
-
-    {{ Form::label('fecha_inicio', 'Fecha Inicio') }}
-    {{ Form::text('fecha_inicio', $cronograma->fecha_inicio) }}
-
-    <script type="text/javascript">
-            $(function(){
-                $('*[id=fecha_inicio]').appendDtpicker({
-                    "inline": true,
-                    "dateOnly": true,                    
-                    "dateFormat": "DD-MM-YYYY"
-                });
-            });
-    </script>
-
-    {{ Form::label('fecha_fin', 'Fecha Fin') }}
-    {{ Form::text('fecha_fin', $cronograma->fecha_fin) }}
-
-        
-    <script type="text/javascript">
-            $(function(){
-                $('*[id=fecha_fin]').appendDtpicker({
-                    "inline": true,
-                    "dateOnly": true,                    
-                    "dateFormat": "DD-MM-YYYY"
-                });
-            });
-    </script>
-
-
-    {{ Form::label('duracion', 'Duracion') }}
-    {{ Form::text('duracion', $cronograma->duracion) }}
-
-
-
-
-
-
-
-
+<body class="body">
     
+    <div class="frmcreate">
+    <br>        
+    <h3 class="titulos">Editar Cronograma</h3>
+        <br>
+        {{ Form::open(array('url' => "cronogramas/$cronograma->id/update")) }}
+        <br>
+        <div class="FI">{{ Form::label('fecha_inicio', 'Fecha Inicio') }}</div>
 
-    {{ Form::label('alcance_proyecto_id', 'Alcances') }}   
+        <div class="inp">
+        <input type="text" name="fecha_inicio" value="">
+        <script type="text/javascript">
+            $(function(){
+                $('*[name=fecha_inicio]').appendDtpicker({
+                    "inline": true,
+                    "dateOnly": true,                    
+                    "dateFormat": "DD-MM-YYYY"
+                });
+            });
+        </script>
+        </div>        
+        <br>
+       <div class="FN">{{ Form::label('fecha_fin', 'Fecha Fin') }}</div> 
+        <div class="inp">
+        <div >
+        <input type="text" name="fecha_fin" value="">
+        <script type="text/javascript">
+            $(function(){
+                $('*[name=fecha_fin]').appendDtpicker({
+                    "inline": true,
+                    "dateOnly": true,                    
+                    "dateFormat": "DD-MM-YYYY"
+                });
+            });
+        </script>
+    </div>  
+        <br>
+       <div class="DU">{{ Form::label('duracion', 'Duración') }}</div> 
+        <br>
+        <div class="txtDu">{{ Form::text('duracion', $cronograma->duracion) }}</div>
+        <br>     
+    
+        <div class="DU">{{ Form::label('alcance_proyecto_id', 'Alcances') }}</div>
+        <div class= "cmbAlcan">
+            <select name="alcance">
+                 @foreach($alcance as $alcance)
+                    <option value={{$alcance->id}}>{{$alcance->nombre_actividad}}</option>
+                @endforeach
+            </select>
+        </div>    
+        <br>
+        <br>
+        <div class="btnCreateCro">{{Form::submit('Guardar', array('class' => 'btn btn-success'))}}</div>
+        <div class="btnRegresarCro">{{ HTML::linkAction('CronogramaController@index', 'Back', array(), array('class' => 'btn btn-default')) }}</div>
+        <br>
 
-    <select name="alcance">
-        @foreach($alcance as $alcance)
-            <option value={{$alcance->id}}>{{$alcance->nombre_actividad}}</option>
-        @endforeach
-    </select>
+    {{ Form::close() }}     
 
-
-    {{Form::submit('Salvar', array())}}
-
-{{ Form::close() }}
-
+    </div>
+</body>
 
 {{HTML::script('js/js.js');}}
+

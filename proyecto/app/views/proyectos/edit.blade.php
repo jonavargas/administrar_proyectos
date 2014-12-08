@@ -4,7 +4,7 @@
 
 <div class="frmcreateProyecto">
     <br>
-    <h3>Editar Piloto</h3>
+    <h3 class="titulos">Editar Piloto</h3>
 
     <br>
     {{ Form::open(array('url' => "proyectos/$proyecto->id/update")) }}

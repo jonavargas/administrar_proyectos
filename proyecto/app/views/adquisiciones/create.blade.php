@@ -1,7 +1,7 @@
 <body class="body" >
     <div class="frmcreate">
         <br>
-        <h3>Nueva Adquisición</h3>
+        <h3 class="titulos">Nueva Adquisición</h3>
         <br>
         {{ Form::open(array('url' => 'adquisiciones')) }}
         <br>
@@ -15,26 +15,21 @@
             <br>
             <div class="lblalcance">{{ Form::label('alcance', 'Alcance') }}</div>
             <div class="cmbAlcance">
-            <select name="alcance">
-                @foreach($alcances as $alcance)
-                    <option value={{$alcance->id}}>{{$alcance->nombre_actividad}}</option>
-                @endforeach
-            </select>
+                <select name="alcance">
+                    @foreach($alcances as $alcance)
+                        <option value={{$alcance->id}}>{{$alcance->nombre_actividad}}</option>
+                    @endforeach
+                </select>
                 
             </div>
 
               <br>
         <br>
-        <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-default'))}}</div>
+        <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-success'))}}</div>
         <div class="btnRegresar">{{ HTML::linkAction('InteresadosController@index', 'Back', array(), array('class' => 'btn btn-default')) }}</div>
         <br>          
 
          {{ Form::close() }}
         
-
-    </div>
-        
+    </div>        
 </body>    
-
-
-

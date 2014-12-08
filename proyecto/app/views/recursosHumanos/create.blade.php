@@ -4,7 +4,7 @@
 <div class="frmcreate">
     {{ Form::open(array('url' => 'recursosHumanos')) }}
     <br>
-    <h3>Nuevo Recurso Humano</h3>
+    <h3 class="titulos">Nuevo Recurso Humano</h3>
     <br>
     {{ Form::label('personal_requerido', 'Personal Requerido') }}
     <br>
@@ -35,7 +35,7 @@
     </div>
     <br>
     <br>
-    <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-default'))}}</div>
+    <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-success'))}}</div>
     <div class="btnRegresar">{{ HTML::linkAction('RecursoHumanoController@index', 'Back', array(), array('class' => 'btn btn-default')) }}</div>
     <br>
 {{ Form::close() }}

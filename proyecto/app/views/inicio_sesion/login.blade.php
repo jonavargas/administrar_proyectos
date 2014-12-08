@@ -11,7 +11,7 @@
 
 	{{ Form::open(array('url' => 'login')) }}
 		<br>
-		<h1>Iniciar Sesión</h1>
+		<h1 class="titulos">Iniciar Sesión</h1>
 		<br>
 		<label for="usuario"><h4><strong class= "glyphicon glyphicon-user lblUser"> Usuario:</strong></h4></label>
 		<div class= "email">{{Form::text('usuario', Input::old('usuario'), array('placeholder' => 'Usuario', 'required' => 'true'))}}</div>
@@ -20,7 +20,7 @@
 		<div class="password">{{ Form::password('password', array('placeholder' => 'Contraseña', 'required' => 'true')) }}</div>
 		<br>
 		<br>
-		<div class="submit">{{ Form::submit('Inicio Sesión', array('class' => 'btn btn-default'))}}</div>
+		<div class="submit">{{ Form::submit('Inicio Sesión', array('class' => 'btn btn-success'))}}</div>
 		<br>	
 	{{ Form::close() }}
 	 

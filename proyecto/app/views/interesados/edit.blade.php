@@ -1,7 +1,7 @@
 <body class="body">
     <div class="frmcreate">
     <br>
-    <h3>Editar Interesado</h3>
+    <h3 class="titulos">Editar Interesado</h3>
     <br>
     {{ Form::open(array('url' => "interesados/$interesado->id/update")) }}
     

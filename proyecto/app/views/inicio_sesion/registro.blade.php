@@ -4,7 +4,7 @@
 <div class="frmlogin">
 	{{ Form::open(array('url' => 'registro')) }}
 		<br>
-		<h1>Registro</h1>
+		<h1 class="titulos">Registro</h1>
 		<br>
 		<label for="usuario"><h4><strong class= "glyphicon glyphicon-user lblUser"> Usuario:</strong></h4></label>
 		<br>
@@ -16,7 +16,7 @@
 		<div class="password">{{ Form::password('password', array('placeholder' => 'Contraseña', 'required' => 'true')) }}</div>
 		<br>
 		<br>
-		<div class="submit">{{ Form::submit('Registrar', array('class' => 'btn btn-default'))}}</div>
+		<div class="submit">{{ Form::submit('Registrar', array('class' => 'btn btn-success'))}}</div>
 		<br>
 {{ Form::close() }}
 

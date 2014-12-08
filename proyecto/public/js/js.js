@@ -5,6 +5,10 @@
  * https://github.com/mugifly/jquery-simple-datetimepicker
  */
 
+$('.glyphicon-remove').click(function confirmar(){                              
+            return confirm( '¿Desea eliminar este registro?' );
+        });
+
  (function($) {
 	var lang = {
 		en: {

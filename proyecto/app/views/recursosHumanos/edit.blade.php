@@ -4,7 +4,7 @@
 <div class="frmcreate">
    
     <br>
-    <h3>Editar Recurso Humano</h3>
+    <h3 class="titulos">Editar Recurso Humano</h3>
     <br>
     {{ Form::open(array('url' => "recursosHumanos/$rh->id/update")) }}
     <br>

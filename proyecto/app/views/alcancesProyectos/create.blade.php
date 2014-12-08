@@ -2,7 +2,7 @@
     
     <div class="frmCreateAlcance">
         <br>
-        <h3>Nuevo Alcance</h3>
+        <h3 class="titulos">Nuevo Alcance</h3>
         {{ Form::open(array('url' => 'alcancesProyectos')) }}
         <br>
         <h4><strong>Responsable</strong></h4>
@@ -61,7 +61,7 @@
     <br>
 
 
-    <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-default'))}}</div>
+    <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-success'))}}</div>
     <div class="btnbackAlc">{{ HTML::linkAction('AlcanceProyectoController@index', 'Back', array(), array('class' => 'btn btn-default')) }}</div>
     <br>
     <br>

@@ -1,7 +1,7 @@
 <body class="body">
     <div class="frmcreate">
     <br>        
-    <h3>Nueva Comunicación</h3>
+    <h3 class="titulos">Nueva Comunicación</h3>
     <br>
     {{ Form::open(array('url' => 'comunicaciones')) }}
     
@@ -37,7 +37,7 @@
 
     <br>
     <br>
-    <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-default'))}}</div>
+    <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-success'))}}</div>
     <div class="btnRegresar">{{ HTML::linkAction('ComunicacionesController@index', 'Back', array(), array('class' => 'btn btn-default')) }}</div>
     <br>
 {{ Form::close() }}

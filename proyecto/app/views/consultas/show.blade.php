@@ -43,5 +43,6 @@
 			
 			<h4>{{ Form::label('riesgo', 'Riesgo Proyecto') }}</h4>
 			<strong>Riesgo: </strong>{{$consulta->nombre_proyecto}}<br>
-			{{ HTML::linkAction('ConsultasController@index', 'Atras', array(), array('class' => 'btn btn-primary')) }}
+			
         @endforeach
+        {{ HTML::linkAction('ConsultasController@index', 'Atras', array(), array('class' => 'btn btn-primary')) }}

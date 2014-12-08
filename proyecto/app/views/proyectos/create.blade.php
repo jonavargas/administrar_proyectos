@@ -4,7 +4,7 @@
 
 <div class="frmcreateProyecto">
     <br>
-    <h3>Nuevo Proyecto</h3>
+    <h3 class="titulos">Nuevo Proyecto</h3>
     <br>
     {{ Form::open(array('url' => 'proyectos')) }}
 
@@ -51,7 +51,7 @@
     <div>{{ Form::textarea('observaciones', null, ['size' => '30x5']) }}</div>
     <br>
     <br>
-    <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-default'))}}</div>
+    <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-success'))}}</div>
     <div class="btnback">{{ HTML::linkAction('ProyectoController@index', 'Back', array(), array('class' => 'btn btn-default')) }}</div>
     <br>
 

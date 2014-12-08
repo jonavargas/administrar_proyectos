@@ -17,4 +17,3 @@ class Adquisiciones extends Eloquent
 		return DB::select($sql);
 	}
 }
-

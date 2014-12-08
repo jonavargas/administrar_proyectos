@@ -2,7 +2,7 @@
     <div class="frmcreate">
         <br>
         
-        <h3>Editar Tipo de Comunicación</h3>
+        <h3 class="titulos">Editar Tipo de Comunicación</h3>
         <br>
         {{ Form::open(array('url' => "tipoComunicaciones/$tipo_comunicacion->id/update")) }}
     
