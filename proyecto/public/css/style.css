@@ -145,6 +145,39 @@
 	margin-left: 84%;
 	margin-top: -4%;
 }
+
+.table_fecha{
+	width: 35%;
+	margin-left: 5%;
+}
+.table_nom_pro{
+	margin-left: 45%;
+    margin-top: -20.5%;
+	width: 50%;
+}
+
+.table_dir_pro{
+	margin-left: 5%;
+    margin-top: 10%;
+	width: 90%;
+}
+.table_patro{
+	width: 35%;
+	margin-left: 5%;	
+}
+
+.table_mon_pro{
+	margin-left: 45%;
+    margin-top: -12.5%;
+	width: 50%;
+}
+
+.table_rh_pro{
+	margin-left: 5%;
+    margin-top: 2%;
+	width: 90%;
+}
+
 /****************************************************************************************************************/
 .cmbAlcance{
 	margin-left: 27%;
