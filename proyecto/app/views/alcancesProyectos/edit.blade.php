@@ -1,48 +1,70 @@
-<h3>Editar Proyecto</h3>
-
-{{ Form::open(array('url' => "alcancesProyectos/$alcance_proyecto->id/update")) }}
-
-    {{ Form::label('nombre', 'Nombre Responsable') }}
-    {{ Form::text('nombre_responsable', $alcance_proyecto->nombre_responsable) }}
-
-    {{ Form::label('apellido1', 'Apellido 1') }}
-    {{ Form::text('apellido1', $alcance_proyecto->apellido1) }}
-
-    {{ Form::label('apellido2', 'Apellido') }}
-    {{ Form::text('apellido2', $alcance_proyecto->apellido2) }}
+<body class="body">
     
-    {{ Form::label('nombre_actividad', 'Nombre Actividad') }}
-    {{ Form::text('nombre_actividad', $alcance_proyecto->nombre_actividad) }}
+    <div class="frmCreateAlcance">
+        <br>        
+        <h3>Editar Proyecto</h3>
+        {{ Form::open(array('url' => "alcancesProyectos/$alcance_proyecto->id/update")) }}
+        <br>
+        <h4><strong>Responsable</strong></h4>
+        <br>
+        <div class="lblNR">{{ Form::label('nombre', 'Nombre') }}</div>
+        <br>
+        <div class="txtNR">{{ Form::text('nombre_responsable', $alcance_proyecto->nombre_responsable) }}</div>
+        <br>
+        <div class="lblPA">{{ Form::label('apellido1', 'Apellido 1') }}</div>
+        <br>
+        <div class="txtPA">{{ Form::text('apellido1', $alcance_proyecto->apellido1) }}</div>
+        <br>
+        <div class="lblSA">{{ Form::label('apellido2', 'Apellido 2') }}</div>
+        <br>
+        <div class="texSA">{{ Form::text('apellido2', $alcance_proyecto->apellido2) }}</div>
+        <br>
+         <h4><strong>Actividad</strong></h4>
+         <br>
+        <div class="lblNR">{{ Form::label('nombre_actividad', 'Nombre') }}</div>
+        <br>
+        <div class="txtNR">{{ Form::text('nombre_actividad', $alcance_proyecto->nombre_actividad) }}</div>
+        <br>
+        <div class="lblPA">{{ Form::label('descripcion', 'Descripcion') }}</div>
+        <br>
+        <div class="txtPA">{{ Form::text('descripcion', $alcance_proyecto->descripcion) }}</div>
+        <br>
+        <div class="lblSA">{{ Form::label('calidad', 'Calidad') }}</div>
+        <br>
+        <div class="texSA">{{ Form::text('calidad', $alcance_proyecto->calidad) }}</div>
+        <br>
+        <br>
+        <div class="lblFE">{{ Form::label('fecha', 'Fecha Estimada') }} </div>
+        <div class="inpFecha"> {{ Form::text('fecha', $alcance_proyecto->fecha_estimada) }}</div>
 
-    {{ Form::label('descripcion', 'Descripcion') }}
-    {{ Form::text('descripcion', $alcance_proyecto->descripcion) }}
-
-    {{ Form::label('calidad', 'Calidad') }}
-    {{ Form::text('calidad', $alcance_proyecto->calidad) }}
-
-    {{ Form::label('fecha', 'Fecha Estimada') }}
-    {{ Form::text('fecha', $alcance_proyecto->fecha_estimada) }}
-    
-    <script type="text/javascript">
-            $(function(){
-                $('*[id=fecha]').appendDtpicker({
-                    "inline": true,
-                    "dateOnly": true,                    
-                    "dateFormat": "DD-MM-YYYY"
+            <script type="text/javascript">
+                $(function(){
+                    $('*[name=fecha]').appendDtpicker({
+                        "inline": true,
+                        "dateOnly": true,                    
+                        "dateFormat": "DD-MM-YYYY"
+                    });
                 });
-            });
-    </script>
-
-    {{ Form::label('proyecto_id', 'Proyectos') }}   
-
-    <select name="proyecto">
+         </script>
+         <br>    
+        <div class="lblPro">{{ Form::label('proyecto_id', 'Proyecto') }}</div>
+    <div class="cmbPro">
+        <select name="proyecto">
         @foreach($proyectos as $proyecto)
             <option value={{$proyecto->id}}>{{$proyecto->nombre_proyecto}}</option>
         @endforeach
-    </select>
+    </select>        
+    </div>
+    <br>
+    <br>
+    <div class="btnCreate">{{Form::submit('Guardar', array('class' => 'btn btn-default'))}}</div>
+    <div class="btnbackAlc">{{ HTML::linkAction('AlcanceProyectoController@index', 'Back', array(), array('class' => 'btn btn-default')) }}</div>
+    <br>
+    <br>
+    {{ Form::close() }}
+</div>    
+</body>
 
-
-    {{Form::submit('Salvar', array())}}
-
-{{ Form::close() }}
 {{HTML::script('js/js.js');}}
+
+

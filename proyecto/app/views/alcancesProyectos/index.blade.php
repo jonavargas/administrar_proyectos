@@ -1,7 +1,8 @@
 <?php
     if (Auth::check()) {
-?>        
-        <div class="newtask">{{link_to("alcancesProyectos/create", 'Crear', $attributes = array('class' => 'btn btn-primary'), $secure = null);}}</div>
+?>      
+        <h2 class="titulos"><strong>Alcances de Proyecto</strong></h2>        
+        <div class="create">{{link_to("alcancesProyectos/create", 'Crear', $attributes = array('class' => 'btn btn-primary'), $secure = null);}}</div>
 <?php
     }
 ?> 
@@ -10,7 +11,7 @@
     <tr class="tr">
         <th colspan="3" class="th">Nombre Responsable</th>
         <th class="th">Nombre Actividad</th>
-        <th class="th">Descripcion</th>
+        <th class="th">Descripción</th>
         <th class="th">Calidad</th>
         <th class="th">Fecha Estimada</th>
         <th class="th">Proyecto</th>

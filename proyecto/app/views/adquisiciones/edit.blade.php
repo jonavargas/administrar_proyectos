@@ -10,9 +10,9 @@
 
     {{ Form::label('alcance_proyecto_id', 'Alcances') }}   
 
-    <select name="alcacne">
-        @foreach($alcances as $alcacne)
-            <option value={{$alcacne->id}}>{{$alcacne->nombre_actividad}}</option>
+    <select name="alcance">
+        @foreach($alcances as $alcance)
+            <option value={{$alcance->id}}>{{$alcance->nombre_actividad}}</option>
         @endforeach
     </select>
 

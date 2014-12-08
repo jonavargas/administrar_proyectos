@@ -66,3 +66,8 @@ Route::resource('costos', 'CostoController');
 Route::post('costos/{id}/update', 'CostoController@update');
 Route::get('costos/{id}/delete', 'CostoController@destroy');
 
+Route::resource('consultas', 'ConsultasController');
+Route::post('consultas/{id}/update', 'ConsultasController@update');
+Route::get('consultas/{id}/delete', 'ConsultasController@destroy');
+
+Route::post('consultas/show', 'ConsultasController@show');

@@ -10,7 +10,7 @@ class Adquisiciones extends Eloquent
 
 	public static function GetAdquisiciones()
 	{
-		$sql ='select ad.id, ad.nombre_adquisicion, ad.costo_adquisicion, a.id as alcance_id
+		$sql ='select ad.id, ad.nombre_adquisicion, ad.costo_adquisicion, a.id as alcance_id, a.nombre_actividad
 		    from adquisiciones ad
 		    inner join alcance_proyecto a on (ad.alcance_proyecto_id = a.id)';
 

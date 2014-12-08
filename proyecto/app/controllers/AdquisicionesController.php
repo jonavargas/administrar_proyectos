@@ -55,8 +55,7 @@ class AdquisicionesController extends \BaseController {
 
         $adquisicion = new Adquisiciones();
         $adquisicion->nombre_adquisicion = $nombre_adquisicion;        
-        $adquisicion->costo_adquisicion = $costo_adquisicion;
-        
+        $adquisicion->costo_adquisicion = $costo_adquisicion;        
         $adquisicion->alcance_proyecto_id = $alcance_proyecto_id;
   
         $adquisicion->save();
@@ -105,10 +104,12 @@ class AdquisicionesController extends \BaseController {
 	{
         $nombre_adquisicion = Input::get("nombre_adquisicion");
         $costo_adquisicion = Input::get("costo_adquisicion");
+        $alcance_proyecto_id = Input::get("alcance");
 
         $adquisicion = Adquisiciones::find($id);
         $adquisicion->nombre_adquisicion = $nombre_adquisicion;        
         $adquisicion->costo_adquisicion = $costo_adquisicion;
+        $adquisicion->alcance_proyecto_id = $alcance_proyecto_id;
   
         $adquisicion->save();
         return Redirect::to('adquisiciones');        

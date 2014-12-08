@@ -1,7 +1,8 @@
 <?php
     if (Auth::check()) {
-?>        
-        <div class="newtask">{{link_to("adquisiciones/create", 'Crear', $attributes = array('class' => 'btn btn-primary'), $secure = null);}}</div>
+?>      
+        <h2 class="titulos"><strong>Adquisiciones</strong></h2>     
+        <div class="create">{{link_to("adquisiciones/create", 'Crear', $attributes = array('class' => 'btn btn-primary'), $secure = null);}}</div>
 <?php
     }
 ?> 
@@ -25,7 +26,7 @@
         <tr>            
             <td ALIGN=center>{{ $adquisicion->nombre_adquisicion }}</td>  
             <td ALIGN=center>{{ $adquisicion->costo_adquisicion }}</td>  
-            <td ALIGN=center>{{ $adquisicion->alcance_id }}</td>          
+            <td ALIGN=center>{{ $adquisicion->nombre_actividad }}</td>
              
             <?php
        

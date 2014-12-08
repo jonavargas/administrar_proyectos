@@ -1,30 +1,51 @@
-<h3>Nueva Comunicación</h3>
-
-{{ Form::open(array('url' => 'comunicaciones')) }}
+<body class="body">
+    <div class="frmcreate">
+    <br>        
+    <h3>Nueva Comunicación</h3>
+    <br>
+    {{ Form::open(array('url' => 'comunicaciones')) }}
     
-    {{ Form::label('nombre_contacto', 'Nombre Contacto') }}
-    {{ Form::text('nombre_contacto', '') }}
-
-    {{ Form::label('apellido1_contacto', 'Apellido 1') }}
-    {{ Form::text('apellido1_contacto', '') }}
-
-    {{ Form::label('apellido2_contacto', 'Apellido 2' ) }}
-    {{ Form::text('apellido2_contacto', '') }}
-    
-    {{ Form::label('metodo_comunicacion', 'Metodo de Comunicación') }}
+    <div class="lblComunicacion">{{ Form::label('nombre_contacto', 'Nombre Contacto') }}</div>
+    <div class="cbmComunicacion">{{ Form::text('nombre_contacto', '') }}</div>
+    <br>
+    <br>
+    <div class="lblRecursoPA">{{ Form::label('apellido1_contacto', 'Primer Apellido') }}</div>
+    <div class="cbmComunicacion">{{ Form::text('apellido1_contacto', '') }}</div>
+    <br>
+    <br>
+    <div class="lblRecursoSA">{{ Form::label('apellido2_contacto', 'Segundo Apellido' ) }}</div>
+    <div class="cbmComunicacion">{{ Form::text('apellido2_contacto', '') }}</div>
+    <br>
+    <br>
+    {{ Form::label('metodo_comunicacion', 'Metodo Comunicación') }}
     {{ Form::text('metodo_comunicacion', '') }}
-
-    {{ Form::label('tipo_comunicacion_id', 'Tipo Comunicación') }}
+    <br>
+    <br>
+    <div class="lblRecursoSA">{{ Form::label('tipo_comunicacion_id', 'Tipo Comunicación') }}</div>
     
-    <select name="tipoComunicacion">
+    <div class="cbmComunicacion">
+        
+        <select name="tipoComunicacion">
         @foreach($tipoComunicaciones as $tipoComunicacion)
             <option value={{$tipoComunicacion->id}}>{{$tipoComunicacion->tipo_comunicacion}}</option>
         @endforeach
     </select>
+        
 
+    </div>
+    
 
-    {{Form::submit('Crear', array())}}
-
+    <br>
+    <br>
+    <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-default'))}}</div>
+    <div class="btnRegresar">{{ HTML::linkAction('ComunicacionesController@index', 'Back', array(), array('class' => 'btn btn-default')) }}</div>
+    <br>
 {{ Form::close() }}
+
+
+    </div>
+</body>
+
+
 
         

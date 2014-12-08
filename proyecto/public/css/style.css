@@ -126,8 +126,32 @@
 	margin-top: -4%;
 }
 /****************************************************************************************************************/
+.cmbAlcance{
+	margin-left: 27%;
+	margin-top: -7%;
+}
 .lblRecursos{
 	margin-left: -55%;
+}
+.lblComunicacion{
+	margin-left: -42%;
+}
+.cbmComunicacion{
+	margin-left: 32%;
+	margin-top: -7%;
+}
+.lblRiesgo{
+	margin-top: -7%;
+	margin-left: 23%;
+}
+.lblNonRiesgo{
+	margin-left: -49%;
+}
+.lblSolucion{
+	margin-left: -45%;
+}
+.lblProSolucion{
+	margin-left:  -43%;
 }
 .lblRecursoPA{
 	margin-left: -45%;
@@ -138,8 +162,14 @@
 .lblTelefono{
 	margin-left: -52%;
 }
+.lblDetalle{
+	margin-left: -20%;
+}
 .lblEspecialidad{
 	margin-left: -46%;
+}
+.lblProyectoCom{
+	margin-left: -55%;
 }
 .txtRecursos{
 	margin-left: 25%;
@@ -149,7 +179,7 @@
 	margin-left: -49%;
 }
 .cmbProyecto{
-	margin-left: -5%;
+	margin-left: 23%;
 	margin-top: -6%;
 }
 .btnCreate{
@@ -164,10 +194,91 @@
 	margin-top: -5%;
 	margin-left: 25%;
 }
+.btnbackAlc{
+	margin-top: -3.5%;
+	margin-left: 15%;
+
+}
+.btnbackSol{
+	margin-top: -7%;
+	margin-left: 25%;
+}
 .lblDescripcion{
 	margin-left: -48%;
 }
+.lblCO{
+	margin-left: -41%;
+}
+.lblCOS{
+	margin-left: -42%;
+}
+.lblNumCO{
+	margin-left: 23%;
+	margin-top: -7%;
+}
+.lblalcance{
+	margin-left: -58%;
+}
+.create{
+	margin-top: 2%;
+	margin-left: 2%;
+}
+.txtCO{
+	margin-top: -7%;
+	margin-left: 30%;
+}
+.titulos{
+	text-align: center;
+}
+.btn-info{
+	background: #78B2F3;
+}
+.frmCreateAlcance{
+	width: 70%;
+	text-align: center;
+	background: #78B2F3;
+	border-radius: 5%;
+	margin-left: 15%;
+	margin-top: 3%;
+}
+.lblNR{
+	margin-left: -85%;
+}
+.lblFE{
+	margin-left: -32%;
+}
+.lblPA{
+	margin-left: -26%;
+	margin-top: -4%;
+}
+.lblSA{
+	margin-left: 38%;
+	margin-top: -4.5%;
+}
+.lblPro{
+	margin-left: -37%;
+}
 
+.cmbPro{
+	margin-left: 5%;
+	margin-top: -3%;
+}
+.inpFecha{
+	margin-left: 3%;
+	margin-top: -3.5%;
+}
+.txtNR{
+	margin-left: -58%;
+	margin-top: -5.5%;
+}
+.txtPA{
+	margin-top: -5.5%;
+	margin-left: 3%;
+}
+.texSA{
+	margin-left: 70%;
+	margin-top: -5.5%;
+}
 
 
 /****************************************************************************************************************/

@@ -1,36 +1,42 @@
-<body>
+<body class="body">
     
-    <div class="frmcreate">
+    <div class="frmCreateAlcance">
+        <br>
         <h3>Nuevo Alcance</h3>
         {{ Form::open(array('url' => 'alcancesProyectos')) }}
-    
-        {{ Form::label('nombre', 'Nombre Responsable') }}
         <br>
-        {{ Form::text('nombre_responsable', '') }}
+        <h4><strong>Responsable</strong></h4>
         <br>
-        {{ Form::label('apellido1', 'Apellido 1') }}
+        <div class="lblNR">{{ Form::label('nombre', 'Nombre') }}</div>
         <br>
-        {{ Form::text('apellido1', '') }}
+        <div class="txtNR"> {{ Form::text('nombre_responsable', '', array('placeholder' => 'Nombre', 'required' => 'true')) }}</div>
         <br>
-        {{ Form::label('apellido2', 'Apellido 2') }}
+        <div class="lblPA">{{ Form::label('apellido1', 'Apellido 1') }}</div>
         <br>
-        {{ Form::text('apellido2', '') }}
+        <div class="txtPA">{{ Form::text('apellido1', '', array('placeholder' => 'Apellido 1', 'required' => 'true')) }}</div>
         <br>
-        {{ Form::label('nombre_actividad', 'Nombre Actividad') }}
+        <div class="lblSA">{{ Form::label('apellido2', 'Apellido 2') }}</div>
         <br>
-        {{ Form::text('nombre_actividad', '') }}
+        <div class="texSA">{{ Form::text('apellido2', '', array('placeholder' => 'Apellido 2', 'required' => 'true')) }}</div>
         <br>
-        {{ Form::label('descripcion', 'Descripcion') }}
+         <h4><strong>Actividad</strong></h4>
+         <br>
+        <div class="lblNR">{{ Form::label('nombre_actividad', 'Nombre') }}</div>
         <br>
-        {{ Form::text('descripcion', '') }}
+        <div class="txtNR">{{ Form::text('nombre_actividad', '', array('placeholder' => 'Nombre', 'required' => 'true')) }}</div>
         <br>
-        {{ Form::label('calidad', 'Calidad') }}
+        <div class="lblPA">{{ Form::label('descripcion', 'Descripcion') }}</div>
         <br>
-        {{ Form::text('calidad', '') }}
+        <div class="txtPA">{{ Form::text('descripcion', '', array('placeholder' => 'Descripción', 'required' => 'true')) }}</div>
         <br>
+        <div class="lblSA">{{ Form::label('calidad', 'Calidad') }}</div>
+        <br>
+        <div class="texSA">{{ Form::text('calidad', '', array('placeholder' => 'Calidad', 'required' => 'true')) }}</div>
+        <br>
+        <br>
+        <div class="lblFE">{{ Form::label('fecha', 'Fecha Estimada') }} </div>
+        <div class="inpFecha"><input type="text" name="fecha" value=""></div>
 
-        {{ Form::label('fecha', 'Fecha Estimada') }}
-        <input type="text" name="fecha" value="">
             <script type="text/javascript">
                 $(function(){
                     $('*[name=fecha]').appendDtpicker({
@@ -43,17 +49,22 @@
          <br>
 
     
-        {{ Form::label('proyecto_id', 'Proyectos') }}
-    
-    <select name="proyecto">
+        <div class="lblPro">{{ Form::label('proyecto_id', 'Proyecto') }}</div>
+    <div class="cmbPro">
+        <select name="proyecto">
         @foreach($proyectos as $proyecto)
             <option value={{$proyecto->id}}>{{$proyecto->nombre_proyecto}}</option>
         @endforeach
-    </select>
+    </select>        
+    </div>
+    <br>
+    <br>
 
 
-    {{Form::submit('Crear', array())}}
-
+    <div class="btnCreate">{{Form::submit('Crear', array('class' => 'btn btn-default'))}}</div>
+    <div class="btnbackAlc">{{ HTML::linkAction('AlcanceProyectoController@index', 'Back', array(), array('class' => 'btn btn-default')) }}</div>
+    <br>
+    <br>
 {{ Form::close() }}
         
 
